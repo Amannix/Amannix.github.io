@@ -119,7 +119,7 @@
 <meta property="og:site_name" content="Xiong&#39;blog">
 <meta property="og:description" content="&amp;emsp;&amp;emsp;在控制算法系统中，先设定一个目标值假设为S，再由传感器定时采样。假设读取的值为依次为X1，X2，X3……Xk。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-15T09:33:28.727Z">
+<meta property="og:updated_time" content="2018-08-15T14:02:05.742Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PID算法小结">
 <meta name="twitter:description" content="&amp;emsp;&amp;emsp;在控制算法系统中，先设定一个目标值假设为S，再由传感器定时采样。假设读取的值为依次为X1，X2，X3……Xk。">
@@ -387,7 +387,7 @@
                 
               
 
-              <time title="创建时间：2018-08-15 16:25:21 / 修改时间：17:33:28" itemprop="dateCreated datePublished" datetime="2018-08-15T16:25:21+08:00">2018-08-15</time>
+              <time title="创建时间：2018-08-15 16:25:21 / 修改时间：22:02:05" itemprop="dateCreated datePublished" datetime="2018-08-15T16:25:21+08:00">2018-08-15</time>
             
 
             
@@ -453,22 +453,22 @@
       
         <p>&emsp;&emsp;在控制算法系统中，先设定一个目标值假设为S，再由传感器定时采样。假设读取的值为依次为X1，X2，X3……Xk。</p>
 <a id="more"></a>
-<p>###P(比例)控制:<br>&emsp;&emsp;假设对每次采样的结果Xk，使<strong>Pk = S - Xk</strong>。其产生三种结果</p>
+<h3 id="P-比例-控制"><a href="#P-比例-控制" class="headerlink" title="P(比例)控制:"></a>P(比例)控制:</h3><p>&emsp;&emsp;假设对每次采样的结果Xk，使<strong>Pk = S - Xk</strong>。其产生三种结果</p>
 <blockquote>
 <p>Pk &gt; 0  当前值未达标<br>Pk == 0  当前值已达标<br>Pk &lt; 0  当前值超标</p>
 </blockquote>
 <p>&emsp;&emsp;则在P控制中，<strong>TOUT = Kp * Pk</strong>，其中Kp为常数，起到一个等比例放大或缩小的作用<br>Pk实际意义便是与目标的差值，P控制的输出量由这个差值等比例放大决定。</p>
-<p>###I(积分)控制<br>&emsp;&emsp;假设<strong>Sk = ∑Pn （n ∈[1,k]）</strong>。同样的，由于Pk的值有正有负。因此Sk的值也分为三种情况</p>
+<h3 id="I-积分-控制"><a href="#I-积分-控制" class="headerlink" title="I(积分)控制"></a>I(积分)控制</h3><p>&emsp;&emsp;假设<strong>Sk = ∑Pn （n ∈[1,k]）</strong>。同样的，由于Pk的值有正有负。因此Sk的值也分为三种情况</p>
 <blockquote>
 <p>Sk &gt; 0  在过去的时间内，系统总体上是不达标的<br>Sk == 0   在过去的时间内，系统总体上是达标的<br>Sk &lt; 0   在过去的时间内，系统总体上是超标的</p>
 </blockquote>
 <p>&emsp;&emsp;此时<strong>TOUT = Kp * Sk</strong> 对应的是积分操作，由过去历史总体情况作出预测。缺点是较长时间之前的<br>数据也会对现在的预测产生影响。</p>
-<p>###D(微分)控制<br>&emsp;&emsp;由于之前已经取得了每个采集样本的Pk值，即采集值与目标值的偏移量，使<strong>Dk = Pk - P(k-1)</strong><br>则Dk描述了此偏移量的变化的快慢。同样分为三种结果</p>
+<h3 id="D-微分-控制"><a href="#D-微分-控制" class="headerlink" title="D(微分)控制"></a>D(微分)控制</h3><p>&emsp;&emsp;由于之前已经取得了每个采集样本的Pk值，即采集值与目标值的偏移量，使<strong>Dk = Pk - P(k-1)</strong><br>则Dk描述了此偏移量的变化的快慢。同样分为三种结果</p>
 <blockquote>
 <p>Dk &gt; 0<br>Dk == 0<br>Dk &lt; 0  </p>
 </blockquote>
 <p>&emsp;&emsp;此时的TOUT = Kp * Dk，显而易见这时的输出量由变化率决定。变化率越大，则输出值越大</p>
-<p>###PID的数学模型<br>&emsp;&emsp;基于上式，最后输出值<strong>TOUT = Pout + Iout + Dout</strong><br>代入合并之后 <strong>Tout = (Kp <em> Pk) + (Kp </em> Sk) + (Kp * Dk)</strong></p>
+<h3 id="PID的数学模型"><a href="#PID的数学模型" class="headerlink" title="PID的数学模型"></a>PID的数学模型</h3><p>&emsp;&emsp;基于上式，最后输出值<strong>TOUT = Pout + Iout + Dout</strong><br>代入合并之后 <strong>Tout = (Kp <em> Pk) + (Kp </em> Sk) + (Kp * Dk)</strong></p>
 <p>(关于Sk Dk的处理下次在写叭)</p>
 
       
@@ -503,8 +503,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/12/练习赛24-B凤凰/" rel="next" title="练习赛24-B凤凰">
-                <i class="fa fa-chevron-left"></i> 练习赛24-B凤凰
+              <a href="/2018/08/12/POJ-1679 Unique MST/" rel="next" title="POJ-1679 Unique MST(判断最小生成树是否唯一)">
+                <i class="fa fa-chevron-left"></i> POJ-1679 Unique MST(判断最小生成树是否唯一)
               </a>
             
           </div>
@@ -560,8 +560,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -580,7 +589,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -614,7 +623,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -648,6 +663,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#P-比例-控制"><span class="nav-number">1.</span> <span class="nav-text">P(比例)控制:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#I-积分-控制"><span class="nav-number">2.</span> <span class="nav-text">I(积分)控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#D-微分-控制"><span class="nav-number">3.</span> <span class="nav-text">D(微分)控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PID的数学模型"><span class="nav-number">4.</span> <span class="nav-text">PID的数学模型</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -679,7 +710,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共1.2k字</span>
+  <span class="post-count">博客全站共2.1k字</span>
 </div>
 
         
