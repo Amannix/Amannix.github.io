@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-08-12T10:41:40.212Z</updated>
+  <updated>2018-08-15T09:33:28.727Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PID算法小结</title>
+    <link href="http://yoursite.com/2018/08/15/PID%E7%AE%97%E6%B3%95%E5%B0%8F%E7%BB%93/"/>
+    <id>http://yoursite.com/2018/08/15/PID算法小结/</id>
+    <published>2018-08-15T08:25:21.000Z</published>
+    <updated>2018-08-15T09:33:28.727Z</updated>
+    
+    <content type="html"><![CDATA[<p>&emsp;&emsp;在控制算法系统中，先设定一个目标值假设为S，再由传感器定时采样。假设读取的值为依次为X1，X2，X3……Xk。</p><a id="more"></a><p>###P(比例)控制:<br>&emsp;&emsp;假设对每次采样的结果Xk，使<strong>Pk = S - Xk</strong>。其产生三种结果</p><blockquote><p>Pk &gt; 0  当前值未达标<br>Pk == 0  当前值已达标<br>Pk &lt; 0  当前值超标</p></blockquote><p>&emsp;&emsp;则在P控制中，<strong>TOUT = Kp * Pk</strong>，其中Kp为常数，起到一个等比例放大或缩小的作用<br>Pk实际意义便是与目标的差值，P控制的输出量由这个差值等比例放大决定。</p><p>###I(积分)控制<br>&emsp;&emsp;假设<strong>Sk = ∑Pn （n ∈[1,k]）</strong>。同样的，由于Pk的值有正有负。因此Sk的值也分为三种情况</p><blockquote><p>Sk &gt; 0  在过去的时间内，系统总体上是不达标的<br>Sk == 0   在过去的时间内，系统总体上是达标的<br>Sk &lt; 0   在过去的时间内，系统总体上是超标的</p></blockquote><p>&emsp;&emsp;此时<strong>TOUT = Kp * Sk</strong> 对应的是积分操作，由过去历史总体情况作出预测。缺点是较长时间之前的<br>数据也会对现在的预测产生影响。</p><p>###D(微分)控制<br>&emsp;&emsp;由于之前已经取得了每个采集样本的Pk值，即采集值与目标值的偏移量，使<strong>Dk = Pk - P(k-1)</strong><br>则Dk描述了此偏移量的变化的快慢。同样分为三种结果</p><blockquote><p>Dk &gt; 0<br>Dk == 0<br>Dk &lt; 0  </p></blockquote><p>&emsp;&emsp;此时的TOUT = Kp * Dk，显而易见这时的输出量由变化率决定。变化率越大，则输出值越大</p><p>###PID的数学模型<br>&emsp;&emsp;基于上式，最后输出值<strong>TOUT = Pout + Iout + Dout</strong><br>代入合并之后 <strong>Tout = (Kp <em> Pk) + (Kp </em> Sk) + (Kp * Dk)</strong></p><p>(关于Sk Dk的处理下次在写叭)</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&amp;emsp;&amp;emsp;在控制算法系统中，先设定一个目标值假设为S，再由传感器定时采样。假设读取的值为依次为X1，X2，X3……Xk。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="嵌入式算法" scheme="http://yoursite.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="PID" scheme="http://yoursite.com/tags/PID/"/>
+    
+  </entry>
   
   <entry>
     <title>练习赛24-B凤凰</title>

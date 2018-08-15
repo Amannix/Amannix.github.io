@@ -111,14 +111,18 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+  <meta name="description" content="&amp;emsp;&amp;emsp;在控制算法系统中，先设定一个目标值假设为S，再由传感器定时采样。假设读取的值为依次为X1，X2，X3……Xk。">
+<meta name="keywords" content="PID">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PID算法小结">
+<meta property="og:url" content="http://yoursite.com/2018/08/15/PID算法小结/index.html">
 <meta property="og:site_name" content="Xiong&#39;blog">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;在控制算法系统中，先设定一个目标值假设为S，再由传感器定时采样。假设读取的值为依次为X1，X2，X3……Xk。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-12T11:13:43.099Z">
+<meta property="og:updated_time" content="2018-08-15T09:33:28.727Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于">
+<meta name="twitter:title" content="PID算法小结">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;在控制算法系统中，先设定一个目标值假设为S，再由传感器定时采样。假设读取的值为依次为X1，X2，X3……Xk。">
 
 
 
@@ -127,7 +131,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/15/PID算法小结/"/>
 
 
 
@@ -137,7 +141,7 @@
   };
 </script>
 
-  <title>关于 | Xiong'blog</title>
+  <title>PID算法小结 | Xiong'blog</title>
   
 
 
@@ -233,7 +237,7 @@
         
         
           
-          <li class="menu-item menu-item-about menu-item-active">
+          <li class="menu-item menu-item-about">
     <a href="/about/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
   </li>
@@ -277,28 +281,6 @@
 
   
     
-
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
 
   
 
@@ -349,43 +331,206 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/15/PID算法小结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="熊梦彪">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xiong'blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">关于</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">PID算法小结
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-08-15 16:25:21 / 修改时间：17:33:28" itemprop="dateCreated datePublished" datetime="2018-08-15T16:25:21+08:00">2018-08-15</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
           
-        
-      </div>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/嵌入式算法/" itemprop="url" rel="index"><span itemprop="name">嵌入式算法</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>&emsp;&emsp;在控制算法系统中，先设定一个目标值假设为S，再由传感器定时采样。假设读取的值为依次为X1，X2，X3……Xk。</p>
+<a id="more"></a>
+<p>###P(比例)控制:<br>&emsp;&emsp;假设对每次采样的结果Xk，使<strong>Pk = S - Xk</strong>。其产生三种结果</p>
+<blockquote>
+<p>Pk &gt; 0  当前值未达标<br>Pk == 0  当前值已达标<br>Pk &lt; 0  当前值超标</p>
+</blockquote>
+<p>&emsp;&emsp;则在P控制中，<strong>TOUT = Kp * Pk</strong>，其中Kp为常数，起到一个等比例放大或缩小的作用<br>Pk实际意义便是与目标的差值，P控制的输出量由这个差值等比例放大决定。</p>
+<p>###I(积分)控制<br>&emsp;&emsp;假设<strong>Sk = ∑Pn （n ∈[1,k]）</strong>。同样的，由于Pk的值有正有负。因此Sk的值也分为三种情况</p>
+<blockquote>
+<p>Sk &gt; 0  在过去的时间内，系统总体上是不达标的<br>Sk == 0   在过去的时间内，系统总体上是达标的<br>Sk &lt; 0   在过去的时间内，系统总体上是超标的</p>
+</blockquote>
+<p>&emsp;&emsp;此时<strong>TOUT = Kp * Sk</strong> 对应的是积分操作，由过去历史总体情况作出预测。缺点是较长时间之前的<br>数据也会对现在的预测产生影响。</p>
+<p>###D(微分)控制<br>&emsp;&emsp;由于之前已经取得了每个采集样本的Pk值，即采集值与目标值的偏移量，使<strong>Dk = Pk - P(k-1)</strong><br>则Dk描述了此偏移量的变化的快慢。同样分为三种结果</p>
+<blockquote>
+<p>Dk &gt; 0<br>Dk == 0<br>Dk &lt; 0  </p>
+</blockquote>
+<p>&emsp;&emsp;此时的TOUT = Kp * Dk，显而易见这时的输出量由变化率决定。变化率越大，则输出值越大</p>
+<p>###PID的数学模型<br>&emsp;&emsp;基于上式，最后输出值<strong>TOUT = Pout + Iout + Dout</strong><br>代入合并之后 <strong>Tout = (Kp <em> Pk) + (Kp </em> Sk) + (Kp * Dk)</strong></p>
+<p>(关于Sk Dk的处理下次在写叭)</p>
+
       
     </div>
+
     
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/PID/" rel="tag"># PID</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/12/练习赛24-B凤凰/" rel="next" title="练习赛24-B凤凰">
+                <i class="fa fa-chevron-left"></i> 练习赛24-B凤凰
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
 
 
 
-    
-    
-    
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
