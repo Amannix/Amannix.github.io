@@ -111,20 +111,18 @@
 
 
 
-  <meta name="description" content="传送门：Qin Shi Huang’s National Road SystemProblem Description During the Warring States Period of ancient China(476 BC to 221 BC), there were seven kingdoms in China —- they were Qi, Chu, Yan, Han, Zhao">
-<meta name="keywords" content="生成树,次小生成树">
+  <meta name="description" content="传送门：Codeforces Round #505 Weakened Common Divisor #Description During the research on properties of the greatest common divisor (GCD) of a set of numbers, Ildar, a famous mathematician, introduced a b">
+<meta name="keywords" content="基础数学">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hdu-4081 Qin Shi Huang&#39;s National Road System(次小生成树)">
-<meta property="og:url" content="http://yoursite.com/2018/08/17/hdu-4081/index.html">
+<meta property="og:title" content="Weakened Common Divisor">
+<meta property="og:url" content="http://yoursite.com/2018/09/01/Weakened Common Divisor/index.html">
 <meta property="og:site_name" content="Xiong&#39;blog">
-<meta property="og:description" content="传送门：Qin Shi Huang’s National Road SystemProblem Description During the Warring States Period of ancient China(476 BC to 221 BC), there were seven kingdoms in China —- they were Qi, Chu, Yan, Han, Zhao">
+<meta property="og:description" content="传送门：Codeforces Round #505 Weakened Common Divisor #Description During the research on properties of the greatest common divisor (GCD) of a set of numbers, Ildar, a famous mathematician, introduced a b">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://raw.githubusercontent.com/Amannix/Amannix.github.io/master/images/blog_caption/hdu-4081.PNG">
-<meta property="og:updated_time" content="2018-08-17T16:13:05.896Z">
+<meta property="og:updated_time" content="2018-09-01T15:42:53.584Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hdu-4081 Qin Shi Huang&#39;s National Road System(次小生成树)">
-<meta name="twitter:description" content="传送门：Qin Shi Huang’s National Road SystemProblem Description During the Warring States Period of ancient China(476 BC to 221 BC), there were seven kingdoms in China —- they were Qi, Chu, Yan, Han, Zhao">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/Amannix/Amannix.github.io/master/images/blog_caption/hdu-4081.PNG">
+<meta name="twitter:title" content="Weakened Common Divisor">
+<meta name="twitter:description" content="传送门：Codeforces Round #505 Weakened Common Divisor #Description During the research on properties of the greatest common divisor (GCD) of a set of numbers, Ildar, a famous mathematician, introduced a b">
 
 
 
@@ -133,7 +131,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/08/17/hdu-4081/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/01/Weakened Common Divisor/"/>
 
 
 
@@ -143,7 +141,7 @@
   };
 </script>
 
-  <title>hdu-4081 Qin Shi Huang's National Road System(次小生成树) | Xiong'blog</title>
+  <title>Weakened Common Divisor | Xiong'blog</title>
   
 
 
@@ -347,7 +345,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/17/hdu-4081/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/01/Weakened Common Divisor/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="熊梦彪">
@@ -364,7 +362,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">hdu-4081 Qin Shi Huang's National Road System(次小生成树)
+          <h1 class="post-title" itemprop="name headline">Weakened Common Divisor
               
             
           </h1>
@@ -390,24 +388,12 @@
                 
               
 
-              <time title="创建时间：2018-08-17 22:25:50" itemprop="dateCreated datePublished" datetime="2018-08-17T22:25:50+08:00">2018-08-17</time>
+              <time title="创建时间：2018-09-01 23:02:35 / 修改时间：23:42:53" itemprop="dateCreated datePublished" datetime="2018-09-01T23:02:35+08:00">2018-09-01</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-08-18 00:13:05" itemprop="dateModified" datetime="2018-08-18T00:13:05+08:00">2018-08-18</time>
               
             
           </span>
@@ -466,26 +452,48 @@
       
 
       
-        <p>传送门：<a href="http://acm.hdu.edu.cn/showproblem.php?pid=4081" target="_blank" rel="noopener">Qin Shi Huang’s National Road System</a><br><strong>Problem Description</strong></p>
-<p>During the Warring States Period of ancient China(476 BC to 221 BC), there were seven kingdoms in China —- they were Qi, Chu, Yan, Han, Zhao, Wei and Qin. Ying Zheng was the king of the kingdom Qin. Through 9 years of wars, he finally conquered all six other kingdoms and became the first emperor of a unified China in 221 BC. That was Qin dynasty —- the first imperial dynasty of China(not to be confused with the Qing Dynasty, the last dynasty of China). So Ying Zheng named himself “Qin Shi Huang” because “Shi Huang” means “the first emperor” in Chinese.<br>Qin Shi Huang undertook gigantic projects, including the first version of the Great Wall of China, the now famous city-sized mausoleum guarded by a life-sized Terracotta Army, and a massive national road system. There is a story about the road system:<br>There were n cities in China and Qin Shi Huang wanted them all be connected by n-1 roads, in order that he could go to every city from the capital city Xianyang.<br>Although Qin Shi Huang was a tyrant, he wanted the total length of all roads to be minimum,so that the road system may not cost too many people’s life. A daoshi (some kind of monk) named Xu Fu told Qin Shi Huang that he could build a road by magic and that magic road would cost no money and no labor. But Xu Fu could only build ONE magic road for Qin Shi Huang. So Qin Shi Huang had to decide where to build the magic road. Qin Shi Huang wanted the total length of all none magic roads to be as small as possible, but Xu Fu wanted the magic road to benefit as many people as possible —- So Qin Shi Huang decided that the value of A/B (the ratio of A to B) must be the maximum, which A is the total population of the two cites connected by the magic road, and B is the total length of none magic roads.<br>Would you help Qin Shi Huang?<br>A city can be considered as a point, and a road can be considered as a line segment connecting two points.</p>
+        <p>传送门：<a href="http://codeforces.com/contest/1025/problem/B" target="_blank" rel="noopener">Codeforces Round #505 Weakened Common Divisor</a></p>
+<p>#Description</p>
+<div class="note default"><p>During the research on properties of the greatest common divisor (GCD) of a set of numbers, Ildar, a famous mathematician, introduced a brand new concept of the weakened common divisor (WCD) of a list of pairs of integers.</p>
+<p>For a given list of pairs of integers (a1,b1)(a1,b1), (a2,b2)(a2,b2), …, (an,bn)(an,bn) their WCD is arbitrary integer greater than 11, such that it divides at least one element in each pair. WCD may not exist for some lists.</p>
+<p>For example, if the list looks like [(12,15),(25,18),(10,24)], then their WCD can be equal to 22, 33, 55 or 66 (each of these numbers is strictly greater than 11 and divides at least one number in each pair).</p>
+<p>You’re currently pursuing your PhD degree under Ildar’s mentorship, and that’s why this problem was delegated to you. Your task is to calculate WCD efficiently.</p></div>
 <a id="more"></a>
-<p><strong>Input</strong></p>
-<p>The first line contains an integer t meaning that there are t test cases(t &lt;= 10).<br>For each test case:<br>The first line is an integer n meaning that there are n cities(2 &lt; n &lt;= 1000).<br>Then n lines follow. Each line contains three integers X, Y and P ( 0 &lt;= X, Y &lt;= 1000, 0 &lt; P &lt; 100000). (X, Y) is the coordinate of a city and P is the population of that city.<br>It is guaranteed that each city has a distinct location.<br><strong>Output</strong></p>
-<p>For each test case, print a line indicating the above mentioned maximum ratio A/B. The result should be rounded to 2 digits after decimal point.</p>
-<p><strong>Sample Input</strong></p>
-<p>2<br>4<br>1 1 20<br>1 2 30<br>200 2 80<br>200 1 100<br>3<br>1 1 20<br>1 2 30<br>2 2 40  </p>
-<p><strong>Sample Output</strong></p>
-<p>65.00<br>70.00</p>
-<p>&emsp;&emsp;题意：给出一堆城市，现在要在每个城市修建公路。要求在公路总长度尽可能的短，并且连接所有的城市。然后这个城市都有一定的人口，现在有一个道士可以使得某条道路不花费任何资源直接变出来。现在要求是，假设这条变出来的道路所连接城市的人口是A ，总的道路长度减去变出来那条路的长度为B。求A/B的最大值，保证A/B最大的同时其他道路总长要求尽可能的短</p>
-<p>&emsp;&emsp;思路：先求最小生成树，然后在题目给的无向图里面枚举每一条边，如果这条边没在生成树里面的话就暂时把它加进去，但是加进去的话生成树就会形成一个环。这时就要找出这个环里面的最大的边把它删掉，求出次小生成树。然后把最小生成树的总权值减去之后删掉的边就是B，那条加入的边连接的两点人数之和就是A。重复枚举边做这个过程找出最大的A/B。<br>&emsp;&emsp;这里关于prim算法有一个以前没注意到的细节，那就是prim算法每次确定下一条边的时候，这个确定的<strong>顺序一定是按照从根节点开始向下延伸的</strong>。<br>&emsp;&emsp;所以关于建树，用一个数组记录每次使用的边的前驱即可。假设low数组中求得的最小值位置为index，那么low[index]代表的是一条边，并且<strong>这个index代表的节点一定是这条边上更加远离根节点的</strong>。所以在下一步对生成树进行优化的时候。对于可被优化的low[p];<br>应令pre[p] = index;去记录前驱。<br>&emsp;&emsp;感觉这题最难的地方是由于新加入的边必定会连接A-B两个点。那么便要DP找出最小生成树上A-B两点之间的最大边以便将其删除。其状态转移方程如下：</p>
+<p>#Input</p>
+<div class="note default"><p>The first line contains a single integer nn (1≤n≤150000) — the number of pairs.</p>
+<p>Each of the next nn lines contains two integer values aiai, bibi (2≤ai,bi≤2⋅10^9).</p></div>
+<p>#Output</p>
+<div class="note default"><p>Print a single integer — the WCD of the set of pairs.</p>
+<p>If there are multiple possible answers, output any; if there is no answer, print −1−1.</p></div>
+<p>#Examples</p>
+<div class="note default"><p><strong>input</strong></p>
 <blockquote>
-<p>vis[j][index] = vis[index][j] = max(vis[j][pre[index]],low[index]);  </p>
+<p>3<br>17 18<br>15 24<br>12 15  </p>
 </blockquote>
-<p>&emsp;&emsp;在这个式子中，vis保存任意两点之间的最大边，pre是前驱。那么对于某一个节点j，<strong>当j是prim算法使用过的节点</strong>。那么，j到其他已经被确定的点之间的最大边必定是处理过的。又由于生成树的过程是从根节点开始延伸，所以只需要每次确定出index的时候遍历出v[j]，如果j被使用过，就比较index的前驱（这里pre[index]由于生成树的过程是从根节点开始延伸，所以与j之间的最长边必定被处理过）与index到pre[index]这条边就可以了。这里low[index]就是index-pre[index]这条边。这个DP还是比较难以理解的。</p>
-<p><img src="https://raw.githubusercontent.com/Amannix/Amannix.github.io/master/images/blog_caption/hdu-4081.PNG" alt=""></p>
-<p>&emsp;&emsp;如上图所示，vis所谓的两点之间最长边就是指如果我把7-9这条边加进去，那么3-6-9-7便形成环，所以我就要求出vis[7][9]–7到9之间的在原本还不是环的时候（也就是最小生成树上的）的最大边也就是6-9（权值为4）。这时我要求7-9的最大边，假设我当前index为7且9被使用过。那么比较pre[7]（也就是3）到9的最大边和7到3的边就OK了。再次重申由于最小生成树建树是从根节点开始延伸，所以index的前驱和其他被使用过的节点之间一定被处理过。  </p>
-<p>&emsp;&emsp;有个坑点是在传统prim算法中，用index去优化low数组时，会加上一个条件是当前被优化的j节点没被使用过，但是这个条件不加上的话对于生成树的最后答案并无影响，可是却会对严重影响DP的过程，因为这个原因WA了好几发。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> Inf=<span class="number">0x3f3f3f3f</span>;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">double</span> vis[<span class="number">1005</span>][<span class="number">1005</span>];</span><br><span class="line"><span class="keyword">int</span> book[<span class="number">1005</span>][<span class="number">1005</span>];</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> p;<span class="comment">//两城市之间人口</span></span><br><span class="line">    <span class="keyword">double</span> dis;<span class="comment">//城市之间距离</span></span><br><span class="line">&#125;ma[<span class="number">1005</span>][<span class="number">1005</span>];</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Point</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> x,y;</span><br><span class="line">    <span class="keyword">int</span> v;<span class="comment">//城市的人口</span></span><br><span class="line">&#125;point[<span class="number">1005</span>];</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">Dis</span><span class="params">(Point a,Point b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">sqrt</span>((<span class="keyword">double</span>)(a.x-b.x)*(a.x-b.x)+(<span class="keyword">double</span>)(a.y-b.y)*(a.y-b.y));</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">prim</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> v[<span class="number">1005</span>] = &#123;<span class="number">0</span>&#125;,pre[<span class="number">1005</span>];</span><br><span class="line">    <span class="keyword">double</span> dis[<span class="number">1005</span>],ans = <span class="number">0</span>;</span><br><span class="line">    v[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= n; ++i)&#123;</span><br><span class="line">        dis[i] = ma[<span class="number">1</span>][i].dis;<span class="comment">//1为根节点</span></span><br><span class="line">        pre[i] = <span class="number">1</span>;<span class="comment">//节点的前驱</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>;i &lt; n; ++i)&#123;</span><br><span class="line">        <span class="keyword">int</span> index = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>;j &lt;= n; ++j)&#123;</span><br><span class="line">            <span class="keyword">if</span> ((index == <span class="number">0</span> || dis[index] &gt; dis[j]) &amp;&amp; !v[j])&#123;</span><br><span class="line">                index = j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        v[index] = <span class="number">1</span>;</span><br><span class="line">        ans += dis[index];</span><br><span class="line">        book[index][pre[index]] = book[pre[index]][index] = <span class="number">1</span>;<span class="comment">//记录被使用过的边</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>;j &lt;= n; ++j)&#123;</span><br><span class="line">            <span class="keyword">if</span> (v[j] &amp;&amp; j != index)&#123;</span><br><span class="line">                <span class="comment">//这里一个DP找出生成树上任意两点间的最大边</span></span><br><span class="line">                vis[j][index] = vis[index][j] = max(vis[j][pre[index]],dis[index]);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (!v[j] &amp;&amp; dis[j] &gt; ma[index][j].dis)&#123;<span class="comment">//这里优化的时候!v[j]这个条件必须加上！！！！</span></span><br><span class="line">                dis[j] = ma[index][j].dis;</span><br><span class="line">                pre[j] = index;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">create</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= n; ++i)&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = i+<span class="number">1</span>;j &lt;= n; ++j)&#123;</span><br><span class="line">            <span class="keyword">if</span> (i == j)&#123;</span><br><span class="line">                ma[i][j].dis = ma[j][i].dis = Inf*<span class="number">1.0</span>;</span><br><span class="line">                ma[i][j].p = ma[j][i].p = Inf*<span class="number">1.0</span>;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            ma[i][j].dis = ma[j][i].dis = Dis(point[i],point[j]);</span><br><span class="line">            ma[i][j].p = ma[j][i].p = point[i].v + point[j].v;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">DP</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">double</span> MST)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">double</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= n; ++i)&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = i+<span class="number">1</span>;j &lt;= n; ++j)&#123;</span><br><span class="line">            <span class="keyword">if</span> (i != j)&#123;</span><br><span class="line">                <span class="keyword">if</span> (book[i][j])&#123;<span class="comment">//如果当前遍历的边就在最小生成树上</span></span><br><span class="line">                    ans = max(ans,<span class="number">1.0</span>*(ma[i][j].p)/(MST - ma[i][j].dis));</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span>&#123;</span><br><span class="line">                    ans = max(ans,<span class="number">1.0</span>*(ma[i][j].p)/(MST - vis[i][j]));<span class="comment">//如果不在</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t,n;</span><br><span class="line">    <span class="keyword">double</span> MST,ans = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span> (<span class="string">"%d"</span>,&amp;t);</span><br><span class="line">    <span class="keyword">while</span> (t--)&#123;</span><br><span class="line">        ans = <span class="number">0</span>;<span class="comment">//又他娘的忘记初始化WA好几发-.-!</span></span><br><span class="line">        <span class="built_in">scanf</span> (<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">        <span class="built_in">memset</span>(book,<span class="number">0</span>,<span class="keyword">sizeof</span> book);</span><br><span class="line">        <span class="built_in">memset</span>(vis,<span class="number">0</span>,<span class="keyword">sizeof</span> vis);</span><br><span class="line">        <span class="built_in">memset</span>(ma,<span class="number">0</span>,<span class="keyword">sizeof</span> ma);</span><br><span class="line">        <span class="built_in">memset</span>(point,<span class="number">0</span>,<span class="keyword">sizeof</span> point);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= n; ++i)&#123;</span><br><span class="line">            <span class="built_in">scanf</span> (<span class="string">"%d%d%d"</span>,&amp;point[i].x,&amp;point[i].y,&amp;point[i].v);</span><br><span class="line">        &#125;</span><br><span class="line">        create(n);</span><br><span class="line">        MST = prim(n);</span><br><span class="line">        ans = DP(n,MST);</span><br><span class="line">        <span class="built_in">printf</span> (<span class="string">"%.2f\n"</span>,ans);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    solve();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong>output</strong></p>
+<blockquote>
+<p>6  </p>
+</blockquote>
+<p><strong>input</strong></p>
+<blockquote>
+<p>2<br>10 16<br>7 17  </p>
+</blockquote>
+<p><strong>output</strong></p>
+<blockquote>
+<p>-1  </p>
+</blockquote>
+<p><strong>input</strong></p>
+<blockquote>
+<p>5<br>90 108<br>45 105<br>75 40<br>165 175<br>33 30</p>
+</blockquote>
+<p><strong>output</strong></p>
+<blockquote>
+<p>5  </p>
+</blockquote></div>
+<p>#题意<br><div class="note default"><p>大意是说给出n组数，每组两个数字。从每组数中取出一个数，求n组数的质因数。不存在则输出-1。  </p></div></p>
+<p>#思路<br><div class="note default"><p>假设给出一组数a b，a或b的质因数必然也是a*b的质因数。之后再枚举第一组数据的质因数即可。</p></div></p>
+<p>#代码</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function">ll <span class="title">gcd</span><span class="params">(ll a,ll b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> b == <span class="number">0</span>?a:gcd(b,a%b);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">get_ans</span><span class="params">(ll n)</span><span class="comment">//为了防止最初的答案大于题目给出的数据</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>;i * i &lt;= n; ++i)&#123;</span><br><span class="line">		<span class="keyword">if</span> (n % i == <span class="number">0</span>)</span><br><span class="line">			<span class="keyword">return</span> i;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	ll a,b,n,A,B;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%lld%lld%lld"</span>,&amp;n,&amp;a,&amp;b);</span><br><span class="line">	<span class="keyword">while</span> (--n)&#123;</span><br><span class="line">		<span class="built_in">scanf</span> (<span class="string">"%lld%lld"</span>,&amp;A,&amp;B);</span><br><span class="line">		a = gcd(A*B,a);</span><br><span class="line">		b = gcd(A*B,b);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (a != <span class="number">1</span>)&#123;</span><br><span class="line">		<span class="built_in">printf</span> (<span class="string">"%lld\n"</span>,get_ans(a));</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span> (b != <span class="number">1</span>)&#123;</span><br><span class="line">		<span class="built_in">printf</span> (<span class="string">"%lld\n"</span>,get_ans(b));</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="built_in">printf</span> (<span class="string">"-1\n"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -506,9 +514,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/生成树/" rel="tag"># 生成树</a>
-          
-            <a href="/tags/次小生成树/" rel="tag"># 次小生成树</a>
+            <a href="/tags/基础数学/" rel="tag"># 基础数学</a>
           
         </div>
       
@@ -521,8 +527,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/16/POJ-1679 Unique MST/" rel="next" title="POJ-1679 Unique MST(判断最小生成树是否唯一)">
-                <i class="fa fa-chevron-left"></i> POJ-1679 Unique MST(判断最小生成树是否唯一)
+              <a href="/2018/08/20/Minimum Value Rectangle/" rel="next" title="codeforces Round 49-Minimum Value Rectangle">
+                <i class="fa fa-chevron-left"></i> codeforces Round 49-Minimum Value Rectangle
               </a>
             
           </div>
@@ -530,10 +536,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/20/Minimum Value Rectangle/" rel="prev" title="codeforces Round 49-Minimum Value Rectangle">
-                codeforces Round 49-Minimum Value Rectangle <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>

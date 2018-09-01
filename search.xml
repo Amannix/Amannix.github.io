@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Weakened Common Divisor]]></title>
+    <url>%2F2018%2F09%2F01%2FWeakened%20Common%20Divisor%2F</url>
+    <content type="text"><![CDATA[传送门：Codeforces Round #505 Weakened Common Divisor #Description During the research on properties of the greatest common divisor (GCD) of a set of numbers, Ildar, a famous mathematician, introduced a brand new concept of the weakened common divisor (WCD) of a list of pairs of integers. For a given list of pairs of integers (a1,b1)(a1,b1), (a2,b2)(a2,b2), …, (an,bn)(an,bn) their WCD is arbitrary integer greater than 11, such that it divides at least one element in each pair. WCD may not exist for some lists. For example, if the list looks like [(12,15),(25,18),(10,24)], then their WCD can be equal to 22, 33, 55 or 66 (each of these numbers is strictly greater than 11 and divides at least one number in each pair). You’re currently pursuing your PhD degree under Ildar’s mentorship, and that’s why this problem was delegated to you. Your task is to calculate WCD efficiently. #Input The first line contains a single integer nn (1≤n≤150000) — the number of pairs. Each of the next nn lines contains two integer values aiai, bibi (2≤ai,bi≤2⋅10^9). #Output Print a single integer — the WCD of the set of pairs. If there are multiple possible answers, output any; if there is no answer, print −1−1. #Examples input 317 1815 2412 15 output 6 input 210 167 17 output -1 input 590 10845 10575 40165 17533 30 output 5 #题意大意是说给出n组数，每组两个数字。从每组数中取出一个数，求n组数的质因数。不存在则输出-1。 #思路假设给出一组数a b，a或b的质因数必然也是a*b的质因数。之后再枚举第一组数据的质因数即可。 #代码 123456789101112131415161718192021222324252627282930313233343536#include &lt;bits/stdc++.h&gt;#define ll long longusing namespace std;ll gcd(ll a,ll b)&#123; return b == 0?a:gcd(b,a%b);&#125;ll get_ans(ll n)//为了防止最初的答案大于题目给出的数据&#123; for (int i = 2;i * i &lt;= n; ++i)&#123; if (n % i == 0) return i; &#125; return n;&#125;int main ()&#123; ll a,b,n,A,B; scanf("%lld%lld%lld",&amp;n,&amp;a,&amp;b); while (--n)&#123; scanf ("%lld%lld",&amp;A,&amp;B); a = gcd(A*B,a); b = gcd(A*B,b); &#125; if (a != 1)&#123; printf ("%lld\n",get_ans(a)); &#125; else if (b != 1)&#123; printf ("%lld\n",get_ans(b)); &#125; else&#123; printf ("-1\n"); &#125; return 0;&#125;]]></content>
+      <categories>
+        <category>ACM题解</category>
+      </categories>
+      <tags>
+        <tag>基础数学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[codeforces Round 49-Minimum Value Rectangle]]></title>
     <url>%2F2018%2F08%2F20%2FMinimum%20Value%20Rectangle%2F</url>
     <content type="text"><![CDATA[传送门：C. Minimum Value Rectangle Problem Description You have n sticks of the given lengths. Your task is to choose exactly four of them in such a way that they can form a rectangle. No sticks can be cut to pieces, each side of the rectangle must be formed by a single stick. No stick can be chosen multiple times. It is guaranteed that it is always possible to choose such sticks. Let S be the area of the rectangle and P be the perimeter of the rectangle. The chosen rectangle should have the value P^2/S minimal possible. The value is taken without any rounding. If there are multiple answers, print any of them. Each testcase contains several lists of sticks, for each of them you are required to solve the problem separately.Example Input347 2 2 782 8 1 4 8 2 1 555 5 5 5 5 Output2 7 7 22 2 1 15 5 5 5 大意就是说有T次查询，每次给出n条边，选出四条边组成一个矩形。然后P是其周长，S是面积现在求出P^2/S最小时，边长的组合。答案不唯一。每条边的边长不超过10^4。在所有的T次查询中，所有边的数量之和不会超过10^6。 思路:由于矩形的定义就是四个角都是直角。所以可以假设边长为a，b。代入P^2/S中得 4*(a/b + b/a + 2) 其中 a/b + b/a 可以令 t = a/b 转化成 (t + 1/t) .这个这里可以得出当a == b时式子最小等于2。于是可以得出原式 &gt;=16 。并且我们可以看出去最小时a，b之间的关系是a和b尽可能的相等。于是这道题只需要排序之后把大于2的边拿出来。答案一定是排序之后两条长度相邻的边。 然后从小到大两两进行比较，找出最优解。 12345678910111213141516171819202122232425262728293031323334353637383940414243#include &lt;stdio.h&gt;#include &lt;algorithm&gt;#include &lt;math.h&gt;#include &lt;string.h&gt;using namespace std;int edg[1000005];int temp[1000005];int main ()&#123; int t,n; scanf ("%d",&amp;t); ++t; while (--t)&#123; scanf ("%d",&amp;n); for (int i = 0;i &lt; n; ++i)&#123; scanf ("%d",&amp;edg[i]); &#125; sort (edg,edg+n); int cnt = -1; for (int i = 1;i &lt; n; ++i)&#123; if (edg[i] == edg[i-1])&#123;//如果有两条相等的边，就把它放入temp数组 temp[++cnt] = edg[i]; edg[i] = edg[i-1] = -1;/*这一步是必须的，否则会误判边的数量 如果edg有1 1 1.三个数，那么根据规律会有两个1被选入temp 接下来的处理中就会使用两条边为 1和1来组成矩形。可实际上并没有四条长度为1的边。*/ &#125; &#125; int s = -1; double Min = 999989.0; double t; for (int i = 1;i &lt;= cnt; ++i)&#123; //枚举两条相邻的边找出最优解 t = 4 * (double)(temp[i-1]+temp[i]) * (double)(temp[i-1]+temp[i]) / (double)(temp[i-1]*temp[i]); //printf ("%d %d %lf\n",temp[i],temp[i-1],t); if (Min &gt; t)&#123; Min = t; s = i; &#125; &#125; printf ("%d %d %d %d\n",temp[s],temp[s],temp[s-1],temp[s-1]); &#125; return 0;&#125;]]></content>
@@ -8,7 +19,7 @@
         <category>ACM题解</category>
       </categories>
       <tags>
-        <tag>基础</tag>
+        <tag>基础数学</tag>
       </tags>
   </entry>
   <entry>
