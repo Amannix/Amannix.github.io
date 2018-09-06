@@ -111,18 +111,18 @@
 
 
 
-  <meta name="description" content="传送门：Codeforces Round #505 Weakened Common Divisor Description During the research on properties of the greatest common divisor (GCD) of a set of numbers, Ildar, a famous mathematician, introduced a br">
-<meta name="keywords" content="基础数学">
+  <meta name="description" content="传送门：POJ-2965 The Pilots Brothers’ refrigerator Description The game “The Pilots Brothers: following the stripy elephant” has a quest where a player needs to open a refrigerator. There are 16 handles o">
+<meta name="keywords" content="枚举">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Weakened Common Divisor">
-<meta property="og:url" content="http://yoursite.com/2018/09/01/Weakened Common Divisor/index.html">
+<meta property="og:title" content="POJ-2965 The Pilots Brothers&#39; refrigerator(DFS+状态压缩)">
+<meta property="og:url" content="http://yoursite.com/2018/09/06/POJ-2965 The Pilots Brothers' refrigerator/index.html">
 <meta property="og:site_name" content="Xiong&#39;blog">
-<meta property="og:description" content="传送门：Codeforces Round #505 Weakened Common Divisor Description During the research on properties of the greatest common divisor (GCD) of a set of numbers, Ildar, a famous mathematician, introduced a br">
+<meta property="og:description" content="传送门：POJ-2965 The Pilots Brothers’ refrigerator Description The game “The Pilots Brothers: following the stripy elephant” has a quest where a player needs to open a refrigerator. There are 16 handles o">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-06T15:27:17.098Z">
+<meta property="og:updated_time" content="2018-09-06T15:25:43.847Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Weakened Common Divisor">
-<meta name="twitter:description" content="传送门：Codeforces Round #505 Weakened Common Divisor Description During the research on properties of the greatest common divisor (GCD) of a set of numbers, Ildar, a famous mathematician, introduced a br">
+<meta name="twitter:title" content="POJ-2965 The Pilots Brothers&#39; refrigerator(DFS+状态压缩)">
+<meta name="twitter:description" content="传送门：POJ-2965 The Pilots Brothers’ refrigerator Description The game “The Pilots Brothers: following the stripy elephant” has a quest where a player needs to open a refrigerator. There are 16 handles o">
 
 
 
@@ -131,7 +131,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/09/01/Weakened Common Divisor/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/06/POJ-2965 The Pilots Brothers' refrigerator/"/>
 
 
 
@@ -141,7 +141,7 @@
   };
 </script>
 
-  <title>Weakened Common Divisor | Xiong'blog</title>
+  <title>POJ-2965 The Pilots Brothers' refrigerator(DFS+状态压缩) | Xiong'blog</title>
   
 
 
@@ -345,7 +345,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/01/Weakened Common Divisor/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/06/POJ-2965 The Pilots Brothers' refrigerator/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="熊梦彪">
@@ -362,7 +362,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Weakened Common Divisor
+          <h1 class="post-title" itemprop="name headline">POJ-2965 The Pilots Brothers' refrigerator(DFS+状态压缩)
               
             
           </h1>
@@ -388,24 +388,12 @@
                 
               
 
-              <time title="创建时间：2018-09-01 23:02:35" itemprop="dateCreated datePublished" datetime="2018-09-01T23:02:35+08:00">2018-09-01</time>
+              <time title="创建时间：2018-09-06 22:38:15 / 修改时间：23:25:43" itemprop="dateCreated datePublished" datetime="2018-09-06T22:38:15+08:00">2018-09-06</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-09-06 23:27:17" itemprop="dateModified" datetime="2018-09-06T23:27:17+08:00">2018-09-06</time>
               
             
           </span>
@@ -464,47 +452,32 @@
       
 
       
-        <p>传送门：<a href="http://codeforces.com/contest/1025/problem/B" target="_blank" rel="noopener">Codeforces Round #505 Weakened Common Divisor</a></p>
+        <p>传送门：<a href="http://poj.org/problem?id=2965" target="_blank" rel="noopener">POJ-2965 The Pilots Brothers’ refrigerator</a></p>
 <p><strong>Description</strong></p>
-<div class="note default"><p>During the research on properties of the greatest common divisor (GCD) of a set of numbers, Ildar, a famous mathematician, introduced a brand new concept of the weakened common divisor (WCD) of a list of pairs of integers.</p>
-<p>For a given list of pairs of integers (a1,b1)(a1,b1), (a2,b2)(a2,b2), …, (an,bn)(an,bn) their WCD is arbitrary integer greater than 11, such that it divides at least one element in each pair. WCD may not exist for some lists.</p>
-<p>For example, if the list looks like [(12,15),(25,18),(10,24)], then their WCD can be equal to 22, 33, 55 or 66 (each of these numbers is strictly greater than 11 and divides at least one number in each pair).</p>
-<p>You’re currently pursuing your PhD degree under Ildar’s mentorship, and that’s why this problem was delegated to you. Your task is to calculate WCD efficiently.</p></div>
+<div class="note default"><p>The game “The Pilots Brothers: following the stripy elephant” has a quest where a player needs to open a refrigerator.</p>
+<p>There are 16 handles on the refrigerator door. Every handle can be in one of two states: open or closed. The refrigerator is open only when all handles are open. The handles are represented as a matrix 4х4. You can change the state of a handle in any location [i, j] (1 ≤ i, j ≤ 4). However, this also changes states of all handles in row i and all handles in column j.</p>
+<p>The task is to determine the minimum number of handle switching necessary to open the refrigerator.</p></div>
 <a id="more"></a>
 <p><strong>Input</strong></p>
-<div class="note default"><p>The first line contains a single integer nn (1≤n≤150000) — the number of pairs.</p>
-<p>Each of the next nn lines contains two integer values aiai, bibi (2≤ai,bi≤2⋅10^9).</p></div>
+<div class="note default"><p>The input contains four lines. Each of the four lines contains four characters describing the initial state of appropriate handles. A symbol “+” means that the handle is in closed state, whereas the symbol “−” means “open”. At least one of the handles is initially closed.</p></div>
 <p><strong>Output</strong></p>
-<div class="note default"><p>Print a single integer — the WCD of the set of pairs.</p>
-<p>If there are multiple possible answers, output any; if there is no answer, print −1−1.</p></div>
-<p><strong>input</strong></p>
+<div class="note default"><p>The first line of the input contains N – the minimum number of switching. The rest N lines describe switching sequence. Each of the lines contains a row number and a column number of the matrix separated by one or more spaces. If there are several solutions, you may give any one of them.</p></div>
+<p><strong>Sample Input</strong></p>
 <blockquote>
-<p>3<br>17 18<br>15 24<br>12 15  </p>
+<p>-+–  </p>
 </blockquote>
-<p><strong>output</strong></p>
+<hr>
+<hr>
+<p>-+–</p>
+<p><strong>Sample Input</strong>  </p>
 <blockquote>
-<p>6  </p>
+<p>6<br>1 1<br>1 3<br>1 4<br>4 1<br>4 3<br>4 4  </p>
 </blockquote>
-<p><strong>input</strong></p>
-<blockquote>
-<p>2<br>10 16<br>7 17  </p>
-</blockquote>
-<p><strong>output</strong></p>
-<blockquote>
-<p>-1  </p>
-</blockquote>
-<p><strong>input</strong></p>
-<blockquote>
-<p>5<br>90 108<br>45 105<br>75 40<br>165 175<br>33 30</p>
-</blockquote>
-<p><strong>output</strong></p>
-<blockquote>
-<p>5  </p>
-</blockquote>
-<p><strong>题意</strong><br><div class="note default"><p>大意是说给出n组数，每组两个数字。从每组数中取出一个数，求n组数的质因数。不存在则输出-1。  </p></div></p>
-<p><strong>思路</strong><br><div class="note default"><p>假设给出一组数a b，a或b的质因数必然也是a*b的质因数。之后再枚举第一组数据的质因数即可。</p></div></p>
-<p><strong>代码</strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function">ll <span class="title">gcd</span><span class="params">(ll a,ll b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> b == <span class="number">0</span>?a:gcd(b,a%b);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">get_ans</span><span class="params">(ll n)</span><span class="comment">//为了防止最初的答案大于题目给出的数据</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>;i * i &lt;= n; ++i)&#123;</span><br><span class="line">        <span class="keyword">if</span> (n % i == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll a,b,n,A,B;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%lld%lld%lld"</span>,&amp;n,&amp;a,&amp;b);</span><br><span class="line">    <span class="keyword">while</span> (--n)&#123;</span><br><span class="line">        <span class="built_in">scanf</span> (<span class="string">"%lld%lld"</span>,&amp;A,&amp;B);</span><br><span class="line">        a = gcd(A*B,a);</span><br><span class="line">        b = gcd(A*B,b);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (a != <span class="number">1</span>)&#123;</span><br><span class="line">        <span class="built_in">printf</span> (<span class="string">"%lld\n"</span>,get_ans(a));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (b != <span class="number">1</span>)&#123;</span><br><span class="line">        <span class="built_in">printf</span> (<span class="string">"%lld\n"</span>,get_ans(b));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="built_in">printf</span> (<span class="string">"-1\n"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong>思路</strong></p>
+<p>和1753类似，这里将一个4X4的格子状态压缩为一个16位的bit去存储。同时对于每一次操作都事先编码成二进制的形式去与原式做按位异或运算来完成翻转操作。以当前状态作为根节点去做广度优先搜索以求出最小翻转步数。从1，1到4，4独立的翻转一次便入队，但是应该注意的是无法用map或者set去维护DSF队列，由于STL开销过大会导致TLE，直接使用数组维护即可。</p>
+<p><strong>Code</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">clock_t</span> t, end;</span><br><span class="line"><span class="keyword">char</span> chees[<span class="number">7</span>][<span class="number">7</span>],str[<span class="number">7</span>][<span class="number">7</span>];</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> step,to,goal,place;</span><br><span class="line">&#125;que[<span class="number">65538</span>];</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> flip[] = &#123;<span class="number">0xF888</span>,<span class="number">0xF444</span>,<span class="number">0xF222</span>,<span class="number">0xF111</span>,<span class="comment">//记录翻转的掩码</span></span><br><span class="line">                    <span class="number">0x8F88</span>,<span class="number">0x4F44</span>,<span class="number">0x2F22</span>,<span class="number">0x1F11</span>,</span><br><span class="line">                    <span class="number">0x88F8</span>,<span class="number">0x44F4</span>,<span class="number">0x22F2</span>,<span class="number">0x11F1</span>,</span><br><span class="line">                    <span class="number">0x888F</span>,<span class="number">0x444F</span>,<span class="number">0x222F</span>,<span class="number">0x111F</span>&#125;;</span><br><span class="line"><span class="built_in">string</span> code[<span class="number">16</span>] = &#123;<span class="string">"1 1"</span>,<span class="string">"1 2"</span>,<span class="string">"1 3"</span>,<span class="string">"1 4"</span>,<span class="comment">//记录最后需要输出的答案</span></span><br><span class="line">                   <span class="string">"2 1"</span>,<span class="string">"2 2"</span>,<span class="string">"2 3"</span>,<span class="string">"2 4"</span>,</span><br><span class="line">                   <span class="string">"3 1"</span>,<span class="string">"3 2"</span>,<span class="string">"3 3"</span>,<span class="string">"3 4"</span>,</span><br><span class="line">                   <span class="string">"4 1"</span>,<span class="string">"4 2"</span>,<span class="string">"4 3"</span>,<span class="string">"4 4"</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> ma[<span class="number">70000</span>];</span><br><span class="line">node start;</span><br><span class="line"><span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; st;</span><br><span class="line"><span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; ans;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span><span class="comment">//转码</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; <span class="number">4</span>; ++i)&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; <span class="number">4</span>; ++j)&#123;</span><br><span class="line">            <span class="keyword">if</span> (chees[i][j] == <span class="string">'+'</span>)&#123;</span><br><span class="line">                start.goal |= (<span class="number">1</span> &lt;&lt; (i*<span class="number">4</span> + j));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print_ans</span><span class="params">(<span class="keyword">int</span> temp)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span> (<span class="string">"%d\n"</span>,que[temp].step);</span><br><span class="line">    <span class="keyword">do</span>&#123;</span><br><span class="line">        st.push(temp);</span><br><span class="line">        temp = que[temp].to;</span><br><span class="line">    &#125;<span class="keyword">while</span> (temp);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (st.size())&#123;</span><br><span class="line">        temp = st.top();</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; code[<span class="number">15</span> - que[temp].place] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="comment">//状态压缩的时候的顺序反了因此导致最后应该输出的答案也是反的</span></span><br><span class="line">        <span class="comment">//ans.push(15 - que[temp].place);</span></span><br><span class="line">        st.pop();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> head = <span class="number">0</span>,end = <span class="number">0</span>;</span><br><span class="line">    start.step = <span class="number">0</span>;</span><br><span class="line">    que[<span class="number">0</span>] = start;</span><br><span class="line">    <span class="keyword">while</span> (head &lt;= end)&#123;</span><br><span class="line">        node temp = que[head];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; <span class="number">16</span>; ++i)&#123;</span><br><span class="line">            node k;</span><br><span class="line">            k.goal = temp.goal ^ flip[i];</span><br><span class="line"></span><br><span class="line">            k.step = temp.step + <span class="number">1</span>;</span><br><span class="line">            k.to = head;</span><br><span class="line">            k.place = i;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (ma[k.goal] != <span class="literal">true</span>)&#123;</span><br><span class="line">                que[++end] = k;</span><br><span class="line">                ma[k.goal] = <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (k.goal == <span class="number">0x0000</span>)&#123;<span class="comment">//如果有一次的状态是0那么即达到题目要求</span></span><br><span class="line">                print_ans(end);</span><br><span class="line">                <span class="comment">//cout &lt;&lt; endl;</span></span><br><span class="line">                <span class="keyword">return</span> ;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        ++head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; <span class="number">4</span>; ++i)&#123;</span><br><span class="line">        <span class="built_in">scanf</span> (<span class="string">"%s"</span>,chees[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//t = clock();</span></span><br><span class="line">    init();</span><br><span class="line">    dfs();</span><br><span class="line">    <span class="comment">//end = clock();</span></span><br><span class="line">    <span class="comment">//cout &lt;&lt; (double)(end - t) / CLOCKS_PER_SEC &lt;&lt; endl;</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*使用map维护DFS队列开销太大对于样例程序来说运行时间为0.03s,而使用普通数组维护则时间为0.002s*/</span></span><br></pre></td></tr></table></figure>
+<p><a href="https://blog.csdn.net/lyy289065406/article/details/6642597" target="_blank" rel="noopener">更多关于此题</a></p>
 
       
     </div>
@@ -525,7 +498,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/基础数学/" rel="tag"># 基础数学</a>
+            <a href="/tags/枚举/" rel="tag"># 枚举</a>
           
         </div>
       
@@ -538,8 +511,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/20/Minimum Value Rectangle/" rel="next" title="codeforces Round 49-Minimum Value Rectangle">
-                <i class="fa fa-chevron-left"></i> codeforces Round 49-Minimum Value Rectangle
+              <a href="/2018/09/06/POJ-1753 Flip-Game/" rel="next" title="POJ-1753 Flip-Game(二进制枚举)">
+                <i class="fa fa-chevron-left"></i> POJ-1753 Flip-Game(二进制枚举)
               </a>
             
           </div>
@@ -547,10 +520,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/02/Plasticine zebra/" rel="prev" title="CF 505 Plasticine zebra(环状字符串处理)">
-                CF 505 Plasticine zebra(环状字符串处理) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>

@@ -111,18 +111,20 @@
 
 
 
-  <meta name="description" content="传送门：Codeforces Round #505 Weakened Common Divisor Description During the research on properties of the greatest common divisor (GCD) of a set of numbers, Ildar, a famous mathematician, introduced a br">
-<meta name="keywords" content="基础数学">
+  <meta name="description" content="传送门：POJ-1753 Flip-Game Description Flip game is played on a rectangular 4x4 field with two-sided pieces placed on each of its 16 squares. One side of each piece is white and the other one is black and">
+<meta name="keywords" content="枚举">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Weakened Common Divisor">
-<meta property="og:url" content="http://yoursite.com/2018/09/01/Weakened Common Divisor/index.html">
+<meta property="og:title" content="POJ-1753 Flip-Game(二进制枚举)">
+<meta property="og:url" content="http://yoursite.com/2018/09/06/POJ-1753 Flip-Game/index.html">
 <meta property="og:site_name" content="Xiong&#39;blog">
-<meta property="og:description" content="传送门：Codeforces Round #505 Weakened Common Divisor Description During the research on properties of the greatest common divisor (GCD) of a set of numbers, Ildar, a famous mathematician, introduced a br">
+<meta property="og:description" content="传送门：POJ-1753 Flip-Game Description Flip game is played on a rectangular 4x4 field with two-sided pieces placed on each of its 16 squares. One side of each piece is white and the other one is black and">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-06T15:27:17.098Z">
+<meta property="og:image" content="http://poj.org/images/1753_1.jpg">
+<meta property="og:updated_time" content="2018-09-06T15:27:48.073Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Weakened Common Divisor">
-<meta name="twitter:description" content="传送门：Codeforces Round #505 Weakened Common Divisor Description During the research on properties of the greatest common divisor (GCD) of a set of numbers, Ildar, a famous mathematician, introduced a br">
+<meta name="twitter:title" content="POJ-1753 Flip-Game(二进制枚举)">
+<meta name="twitter:description" content="传送门：POJ-1753 Flip-Game Description Flip game is played on a rectangular 4x4 field with two-sided pieces placed on each of its 16 squares. One side of each piece is white and the other one is black and">
+<meta name="twitter:image" content="http://poj.org/images/1753_1.jpg">
 
 
 
@@ -131,7 +133,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/09/01/Weakened Common Divisor/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/06/POJ-1753 Flip-Game/"/>
 
 
 
@@ -141,7 +143,7 @@
   };
 </script>
 
-  <title>Weakened Common Divisor | Xiong'blog</title>
+  <title>POJ-1753 Flip-Game(二进制枚举) | Xiong'blog</title>
   
 
 
@@ -345,7 +347,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/01/Weakened Common Divisor/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/06/POJ-1753 Flip-Game/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="熊梦彪">
@@ -362,7 +364,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Weakened Common Divisor
+          <h1 class="post-title" itemprop="name headline">POJ-1753 Flip-Game(二进制枚举)
               
             
           </h1>
@@ -388,24 +390,12 @@
                 
               
 
-              <time title="创建时间：2018-09-01 23:02:35" itemprop="dateCreated datePublished" datetime="2018-09-01T23:02:35+08:00">2018-09-01</time>
+              <time title="创建时间：2018-09-06 17:57:12 / 修改时间：23:27:48" itemprop="dateCreated datePublished" datetime="2018-09-06T17:57:12+08:00">2018-09-06</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-09-06 23:27:17" itemprop="dateModified" datetime="2018-09-06T23:27:17+08:00">2018-09-06</time>
               
             
           </span>
@@ -464,47 +454,30 @@
       
 
       
-        <p>传送门：<a href="http://codeforces.com/contest/1025/problem/B" target="_blank" rel="noopener">Codeforces Round #505 Weakened Common Divisor</a></p>
+        <p>传送门：<a href="http://poj.org/problem?id=1753" target="_blank" rel="noopener">POJ-1753 Flip-Game</a></p>
 <p><strong>Description</strong></p>
-<div class="note default"><p>During the research on properties of the greatest common divisor (GCD) of a set of numbers, Ildar, a famous mathematician, introduced a brand new concept of the weakened common divisor (WCD) of a list of pairs of integers.</p>
-<p>For a given list of pairs of integers (a1,b1)(a1,b1), (a2,b2)(a2,b2), …, (an,bn)(an,bn) their WCD is arbitrary integer greater than 11, such that it divides at least one element in each pair. WCD may not exist for some lists.</p>
-<p>For example, if the list looks like [(12,15),(25,18),(10,24)], then their WCD can be equal to 22, 33, 55 or 66 (each of these numbers is strictly greater than 11 and divides at least one number in each pair).</p>
-<p>You’re currently pursuing your PhD degree under Ildar’s mentorship, and that’s why this problem was delegated to you. Your task is to calculate WCD efficiently.</p></div>
+<div class="note default"><p>Flip game is played on a rectangular 4x4 field with two-sided pieces placed on each of its 16 squares. One side of each piece is white and the other one is black and each piece is lying either it’s black or white side up. Each round you flip 3 to 5 pieces, thus changing the color of their upper side from black to white and vice versa. The pieces to be flipped are chosen every round according to the following rules:<br>Choose any one of the 16 pieces.<br>Flip the chosen piece and also all adjacent pieces to the left, to the right, to the top, and to the bottom of the chosen piece (if there are any).</p>
+<p><img src="http://poj.org/images/1753_1.jpg" alt=""><br>Consider the following position as an example:</p>
+<p>bwbw<br>wwww<br>bbwb<br>bwwb<br>Here “b” denotes pieces lying their black side up and “w” denotes pieces lying their white side up. If we choose to flip the 1st piece from the 3rd row (this choice is shown at the picture), then the field will become:</p>
+<p>bwbw<br>bwww<br>wwwb<br>wwwb<br>The goal of the game is to flip either all pieces white side up or all pieces black side up. You are to write a program that will search for the minimum number of rounds needed to achieve this goal.</p></div>
 <a id="more"></a>
 <p><strong>Input</strong></p>
-<div class="note default"><p>The first line contains a single integer nn (1≤n≤150000) — the number of pairs.</p>
-<p>Each of the next nn lines contains two integer values aiai, bibi (2≤ai,bi≤2⋅10^9).</p></div>
+<div class="note default"><p>The input consists of 4 lines with 4 characters “w” or “b” each that denote game field position.</p></div>
 <p><strong>Output</strong></p>
-<div class="note default"><p>Print a single integer — the WCD of the set of pairs.</p>
-<p>If there are multiple possible answers, output any; if there is no answer, print −1−1.</p></div>
-<p><strong>input</strong></p>
+<div class="note default"><p>Write to the output file a single integer number - the minimum number of rounds needed to achieve the goal of the game from the given position. If the goal is initially achieved, then write 0. If it’s impossible to achieve the goal, then write the word “Impossible” (without quotes).</p></div>
+<p><strong>Sample Input</strong>  </p>
 <blockquote>
-<p>3<br>17 18<br>15 24<br>12 15  </p>
+<p>bwwb<br>bbwb<br>bwwb<br>bwww</p>
 </blockquote>
-<p><strong>output</strong></p>
+<p><strong>Sample Input</strong>  </p>
 <blockquote>
-<p>6  </p>
+<p>4</p>
 </blockquote>
-<p><strong>input</strong></p>
-<blockquote>
-<p>2<br>10 16<br>7 17  </p>
-</blockquote>
-<p><strong>output</strong></p>
-<blockquote>
-<p>-1  </p>
-</blockquote>
-<p><strong>input</strong></p>
-<blockquote>
-<p>5<br>90 108<br>45 105<br>75 40<br>165 175<br>33 30</p>
-</blockquote>
-<p><strong>output</strong></p>
-<blockquote>
-<p>5  </p>
-</blockquote>
-<p><strong>题意</strong><br><div class="note default"><p>大意是说给出n组数，每组两个数字。从每组数中取出一个数，求n组数的质因数。不存在则输出-1。  </p></div></p>
-<p><strong>思路</strong><br><div class="note default"><p>假设给出一组数a b，a或b的质因数必然也是a*b的质因数。之后再枚举第一组数据的质因数即可。</p></div></p>
-<p><strong>代码</strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function">ll <span class="title">gcd</span><span class="params">(ll a,ll b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> b == <span class="number">0</span>?a:gcd(b,a%b);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">get_ans</span><span class="params">(ll n)</span><span class="comment">//为了防止最初的答案大于题目给出的数据</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>;i * i &lt;= n; ++i)&#123;</span><br><span class="line">        <span class="keyword">if</span> (n % i == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll a,b,n,A,B;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%lld%lld%lld"</span>,&amp;n,&amp;a,&amp;b);</span><br><span class="line">    <span class="keyword">while</span> (--n)&#123;</span><br><span class="line">        <span class="built_in">scanf</span> (<span class="string">"%lld%lld"</span>,&amp;A,&amp;B);</span><br><span class="line">        a = gcd(A*B,a);</span><br><span class="line">        b = gcd(A*B,b);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (a != <span class="number">1</span>)&#123;</span><br><span class="line">        <span class="built_in">printf</span> (<span class="string">"%lld\n"</span>,get_ans(a));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (b != <span class="number">1</span>)&#123;</span><br><span class="line">        <span class="built_in">printf</span> (<span class="string">"%lld\n"</span>,get_ans(b));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="built_in">printf</span> (<span class="string">"-1\n"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong>思路</strong></p>
+<p>将矩阵中的黑白棋子编码成二进制，16个格子枚举翻过去的话总共也才2^16种情况。实际上也可以只枚举第一行翻转的情况是2^4，主要的就是利用变量的二进制bit去做一个枚举。然后按照上一行的情况去翻转对应的下一行的格子即可。</p>
+<p><strong>Code</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> next[<span class="number">4</span>][<span class="number">2</span>] = &#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">-1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">-1</span>,<span class="number">0</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">flip</span><span class="params">(<span class="keyword">char</span> chees[][<span class="number">7</span>],<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    chees[i][j] = !chees[i][j];</span><br><span class="line">    <span class="keyword">if</span> (i+<span class="number">1</span> &lt;= <span class="number">3</span>)</span><br><span class="line">        chees[i+<span class="number">1</span>][j] = !chees[i+<span class="number">1</span>][j];</span><br><span class="line">    <span class="keyword">if</span> (i<span class="number">-1</span> &gt;= <span class="number">0</span>)</span><br><span class="line">        chees[i<span class="number">-1</span>][j] = !chees[i<span class="number">-1</span>][j];</span><br><span class="line">    <span class="keyword">if</span> (j+<span class="number">1</span> &lt;= <span class="number">3</span>)</span><br><span class="line">        chees[i][j+<span class="number">1</span>] = !chees[i][j+<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">if</span> (j<span class="number">-1</span> &gt;= <span class="number">0</span>)</span><br><span class="line">        chees[i][j<span class="number">-1</span>] = !chees[i][j<span class="number">-1</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">char</span> chees[][<span class="number">7</span>],<span class="keyword">int</span> t)</span><span class="comment">//检查是否满足题意</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; <span class="number">4</span>; ++i)&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; <span class="number">4</span>; ++j)&#123;</span><br><span class="line">            <span class="keyword">if</span> (chees[i][j] != t)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">char</span> chees[][<span class="number">7</span>],<span class="keyword">char</span> str[][<span class="number">7</span>])</span><span class="comment">//转码</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; <span class="number">4</span>; ++i)&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; <span class="number">4</span>; ++j)&#123;</span><br><span class="line">            <span class="keyword">if</span> (chees[i][j] == <span class="string">'b'</span>)&#123;</span><br><span class="line">                str[i][j] = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                str[i][j] = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> chees[<span class="number">7</span>][<span class="number">7</span>],str[<span class="number">7</span>][<span class="number">7</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; <span class="number">4</span>; ++i)&#123;</span><br><span class="line">        <span class="built_in">scanf</span> (<span class="string">"%s"</span>,chees[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    init(chees,str);</span><br><span class="line">    <span class="keyword">if</span> (check(str,<span class="number">0</span>) || check(str,<span class="number">1</span>))&#123;</span><br><span class="line">        <span class="built_in">printf</span> (<span class="string">"0\n"</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">99999</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">long</span> <span class="keyword">long</span> i = <span class="number">1</span>;i &lt;= <span class="built_in">pow</span>(<span class="number">2</span>,<span class="number">16</span>); ++i)&#123;</span><br><span class="line">        <span class="keyword">int</span> t = <span class="number">-1</span>,j = i,ans1 = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (j)&#123;<span class="comment">//通过二进制bit来决定什么位置做翻转操作</span></span><br><span class="line">            ++t;</span><br><span class="line">            <span class="keyword">if</span> (j % <span class="number">2</span> == <span class="number">1</span>)&#123;</span><br><span class="line">                ++ans1;</span><br><span class="line">                flip(str,t/<span class="number">4</span>,t%<span class="number">4</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            j /= <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (check(str,<span class="number">0</span>) || check(str,<span class="number">1</span>))&#123;<span class="comment">//每次都要检查是否满足答案</span></span><br><span class="line">                <span class="keyword">if</span> (ans1 != <span class="number">0</span>)</span><br><span class="line">                    ans = min (ans,ans1);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        init(chees,str);<span class="comment">//实际上应该按照原来的方式再翻转一遍，复制数组是一个很不明智的做法，但是我懒-.-</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (ans == <span class="number">99999</span>)</span><br><span class="line">        <span class="built_in">printf</span> (<span class="string">"Impossible\n"</span>);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">printf</span> (<span class="string">"%d\n"</span>,ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><a href="https://blog.csdn.net/lyy289065406/article/details/6642595" target="_blank" rel="noopener">更多关于此题</a></p>
 
       
     </div>
@@ -525,7 +498,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/基础数学/" rel="tag"># 基础数学</a>
+            <a href="/tags/枚举/" rel="tag"># 枚举</a>
           
         </div>
       
@@ -538,8 +511,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/20/Minimum Value Rectangle/" rel="next" title="codeforces Round 49-Minimum Value Rectangle">
-                <i class="fa fa-chevron-left"></i> codeforces Round 49-Minimum Value Rectangle
+              <a href="/2018/09/02/Plasticine zebra/" rel="next" title="CF 505 Plasticine zebra(环状字符串处理)">
+                <i class="fa fa-chevron-left"></i> CF 505 Plasticine zebra(环状字符串处理)
               </a>
             
           </div>
@@ -548,8 +521,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/09/02/Plasticine zebra/" rel="prev" title="CF 505 Plasticine zebra(环状字符串处理)">
-                CF 505 Plasticine zebra(环状字符串处理) <i class="fa fa-chevron-right"></i>
+              <a href="/2018/09/06/POJ-2965 The Pilots Brothers' refrigerator/" rel="prev" title="POJ-2965 The Pilots Brothers' refrigerator(DFS+状态压缩)">
+                POJ-2965 The Pilots Brothers' refrigerator(DFS+状态压缩) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
