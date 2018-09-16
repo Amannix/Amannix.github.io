@@ -26,13 +26,6 @@
 
 
 
-  
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-center-atom.min.css?v=1.0.2" rel="stylesheet">
-
 
 
 
@@ -68,7 +61,7 @@
 <link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next(2).png?v=6.3.0">
 
 
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.3.0">
@@ -81,6 +74,7 @@
 
 
 
+  <link rel="stylesheet" href="https://oindk07nf.qnssl.com/atom-one-dark.css" media="screen" type="text/css">
 
 
 
@@ -117,17 +111,18 @@
 
 
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="传送门：POJ-3041 Asteroids Description Bessie wants to navigate her spaceship through a dangerous asteroid field in the shape of an N x N grid (1 &amp;lt;= N &amp;lt;= 500). The grid contains K asteroids (1 &amp;lt;=">
+<meta name="keywords" content="图论,二分图">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2018/07/18/hello-world/index.html">
+<meta property="og:title" content="POJ-3041 Asteroids(二分图最小点覆盖)">
+<meta property="og:url" content="https://amannix.github.io/2018/09/16/POJ-3041/index.html">
 <meta property="og:site_name" content="Xiong&#39;blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="传送门：POJ-3041 Asteroids Description Bessie wants to navigate her spaceship through a dangerous asteroid field in the shape of an N x N grid (1 &amp;lt;= N &amp;lt;= 500). The grid contains K asteroids (1 &amp;lt;=">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-18T04:47:43.220Z">
+<meta property="og:updated_time" content="2018-09-16T11:10:16.604Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="POJ-3041 Asteroids(二分图最小点覆盖)">
+<meta name="twitter:description" content="传送门：POJ-3041 Asteroids Description Bessie wants to navigate her spaceship through a dangerous asteroid field in the shape of an N x N grid (1 &amp;lt;= N &amp;lt;= 500). The grid contains K asteroids (1 &amp;lt;=">
 
 
 
@@ -136,7 +131,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/18/hello-world/"/>
+  <link rel="canonical" href="https://amannix.github.io/2018/09/16/POJ-3041/"/>
 
 
 
@@ -146,7 +141,7 @@
   };
 </script>
 
-  <title>Hello World | Xiong'blog</title>
+  <title>POJ-3041 Asteroids(二分图最小点覆盖) | Xiong'blog</title>
   
 
 
@@ -237,6 +232,14 @@
           <li class="menu-item menu-item-home">
     <a href="/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
   </li>
         
         
@@ -342,7 +345,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/18/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://amannix.github.io/2018/09/16/POJ-3041/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="熊梦彪">
@@ -359,13 +362,14 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World
+          <h1 class="post-title" itemprop="name headline">POJ-3041 Asteroids(二分图最小点覆盖)
               
             
           </h1>
         
 
         <div class="post-meta">
+          
           <span class="post-time">
 
             
@@ -384,12 +388,34 @@
                 
               
 
-              <time title="创建时间：2018-07-18 12:47:43" itemprop="dateCreated datePublished" datetime="2018-07-18T12:47:43+08:00">2018-07-18</time>
+              <time title="创建时间：2018-09-16 18:35:23 / 修改时间：19:10:16" itemprop="dateCreated datePublished" datetime="2018-09-16T18:35:23+08:00">2018-09-16</time>
             
 
+            
+              
+
+              
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ACM题解/" itemprop="url" rel="index"><span itemprop="name">ACM题解</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -426,15 +452,34 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p>传送门：<a href="http://poj.org/problem?id=3041" target="_blank" rel="noopener">POJ-3041 Asteroids</a></p>
+<p><strong>Description</strong></p>
+<div class="note default"><p>Bessie wants to navigate her spaceship through a dangerous asteroid field in the shape of an N x N grid (1 &lt;= N &lt;= 500). The grid contains K asteroids (1 &lt;= K &lt;= 10,000), which are conveniently located at the lattice points of the grid.</p>
+<p>Fortunately, Bessie has a powerful weapon that can vaporize all the asteroids in any given row or column of the grid with a single shot.This weapon is quite expensive, so she wishes to use it sparingly.Given the location of all the asteroids in the field, find the minimum number of shots Bessie needs to fire to eliminate all of the asteroids.</p></div>
+<a id="more"></a>
+<p><strong>Input</strong></p>
+<div class="note default"><ul>
+<li>Line 1: Two integers N and K, separated by a single space.</li>
+<li>Lines 2..K+1: Each line contains two space-separated integers R and C (1 &lt;= R, C &lt;= N) denoting the row and column coordinates of an asteroid, respectively.</li>
+</ul></div>
+<p><strong>Output</strong></p>
+<div class="note default"><ul>
+<li>Line 1: The integer representing the minimum number of times Bessie must shoot.</li>
+</ul></div>
+<p><strong>Sample Input</strong></p>
+<blockquote>
+<p>3 4<br>1 1<br>1 3<br>2 2<br>3 2</p>
+</blockquote>
+<p><strong>Sample Output</strong></p>
+<blockquote>
+<p>2</p>
+</blockquote>
+<p><strong>Hint</strong></p>
+<div class="note default"><p>INPUT DETAILS:<br>The following diagram represents the data, where “X” is an asteroid and “.” is empty space:<br>X.X<br>.X.<br>.X.</p></div>
+<p><strong>思路</strong></p>
+<p>大致题意是说有一片区域用坐标表示，这个区域上有很多的障碍物，然后飞船可以发射激光消灭每一行或者每一列的所有障碍物，求最小发射次数。可以令坐标x，y分别作为顶点建立二分图模型，每个障碍作为连接顶点的边来看。这样便转化为了求图上最少的顶点数使得所有的边都被关联进去（有点像是最小生成树的概念……），也就是二分图最小点覆盖的问题。根据二分图模型某个定理：最大匹配数=最小点覆盖。于是乎就是非常简单的匈牙利模板。</p>
+<p><strong>Code</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> Max = <span class="number">505</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> m,n,<span class="built_in">map</span>[Max][Max],match[Max];</span><br><span class="line"><span class="keyword">bool</span> vis[Max];</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> u)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= n; ++i)&#123;</span><br><span class="line">        <span class="keyword">if</span> (vis[i] == <span class="literal">false</span> &amp;&amp; <span class="built_in">map</span>[u][i] == <span class="number">1</span>)&#123;</span><br><span class="line">            vis[i] = <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">if</span> (match[i] == <span class="number">-1</span> || find(match[i]))&#123;</span><br><span class="line">                match[i] = u;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span> (<span class="string">"%d%d"</span>,&amp;n,&amp;m);</span><br><span class="line">    <span class="built_in">memset</span>(match,<span class="number">-1</span>,<span class="keyword">sizeof</span> match);</span><br><span class="line">    <span class="built_in">memset</span>(<span class="built_in">map</span>,<span class="number">0</span>,<span class="keyword">sizeof</span> <span class="built_in">map</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; m; ++i)&#123;</span><br><span class="line">        <span class="keyword">int</span> x,y;</span><br><span class="line">        <span class="built_in">scanf</span> (<span class="string">"%d%d"</span>,&amp;x,&amp;y);</span><br><span class="line">        <span class="built_in">map</span>[x][y] = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= n; ++i)&#123;</span><br><span class="line">        <span class="built_in">memset</span>(vis,<span class="number">0</span>,<span class="keyword">sizeof</span> vis);</span><br><span class="line">        <span class="keyword">if</span> (find(i))</span><br><span class="line">            ++ans;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span> (<span class="string">"%d\n"</span>,ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -453,11 +498,39 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/图论/" rel="tag"># 图论</a>
+          
+            <a href="/tags/二分图/" rel="tag"># 二分图</a>
+          
+        </div>
+      
 
       
       
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/14/POJ-1094/" rel="next" title="POJ-1094 Sorting It All Out(拓扑排序)">
+                <i class="fa fa-chevron-left"></i> POJ-1094 Sorting It All Out(拓扑排序)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/09/16/HDU-2255/" rel="prev" title="HDU-2255 奔小康赚大钱(二分图最佳匹配)">
+                HDU-2255 奔小康赚大钱(二分图最佳匹配) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
@@ -488,7 +561,6 @@
         
           
   
-
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
       <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
@@ -504,17 +576,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -533,14 +596,58 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
               
 
               
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
 
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
             </nav>
           
@@ -570,22 +677,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -618,7 +709,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共78字</span>
+  <span class="post-count">博客全站共10.7k字</span>
 </div>
 
         

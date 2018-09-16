@@ -5,9 +5,9 @@
   <subtitle>渡得八千风沙起，揽下九天明月心</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
-  <updated>2018-09-14T07:03:02.669Z</updated>
-  <id>http://yoursite.com/</id>
+  <link href="https://amannix.github.io/"/>
+  <updated>2018-09-16T11:17:52.644Z</updated>
+  <id>https://amannix.github.io/</id>
   
   <author>
     <name>熊梦彪</name>
@@ -17,9 +17,60 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>HDU-2255 奔小康赚大钱(二分图最佳匹配)</title>
+    <link href="https://amannix.github.io/2018/09/16/HDU-2255/"/>
+    <id>https://amannix.github.io/2018/09/16/HDU-2255/</id>
+    <published>2018-09-16T10:51:57.000Z</published>
+    <updated>2018-09-16T11:17:52.644Z</updated>
+    
+    <content type="html"><![CDATA[<p>传送门：<a href="http://acm.hdu.edu.cn/showproblem.php?pid=2255" target="_blank" rel="noopener">HDU-2255 奔小康赚大钱</a></p><p><strong>Problem Description</strong></p><div class="note default"><p>传说在遥远的地方有一个非常富裕的村落,有一天,村长决定进行制度改革：重新分配房子。<br>这可是一件大事,关系到人民的住房问题啊。村里共有n间房间,刚好有n家老百姓,考虑到每家都要有房住（如果有老百姓没房子住的话，容易引起不安定因素），每家必须分配到一间房子且只能得到一间房子。<br>另一方面,村长和另外的村领导希望得到最大的效益,这样村里的机构才会有钱.由于老百姓都比较富裕,他们都能对每一间房子在他们的经济范围内出一定的价格,比如有3间房子,一家老百姓可以对第一间出10万,对第2间出2万,对第3间出20万.(当然是在他们的经济范围内).现在这个问题就是村领导怎样分配房子才能使收入最大.(村民即使有钱购买一间房子但不一定能买到,要看村领导分配的).</p></div><a id="more"></a><p><strong>Input</strong></p><div class="note default"><p>输入数据包含多组测试用例，每组数据的第一行输入n,表示房子的数量(也是老百姓家的数量)，接下来有n行,每行n个数表示第i个村名对第j间房出的价格(n&lt;=300)。</p></div><p><strong>Output</strong></p><div class="note default"><p>请对每组数据输出最大的收入值，每组的输出占一行。</p></div><p><strong>Sample Input</strong></p><blockquote><p>2<br>100 10<br>15 23</p></blockquote><p><strong>Sample Output</strong></p><blockquote><p>123</p></blockquote><p><strong>思路</strong><br>很明显把村民和房子分成两个部分，不同人愿意接受的房子价格作为边。于是就形成了带权值的二分图模型，根据题意就是求解最佳匹配的模板题。</p><p><strong>Code</strong></p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> Max = <span class="number">400</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = <span class="number">0x3f3f3f3f</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> match[Max],ex_x[Max],ex_y[Max],slack[Max],space[Max][Max],N;</span><br><span class="line"><span class="keyword">bool</span> vis_x[Max],vis_y[Max];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    vis_x[x] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; N; ++i)&#123;</span><br><span class="line">        <span class="keyword">if</span> (!vis_y[i])&#123;</span><br><span class="line">            <span class="keyword">int</span> gap = ex_x[x] + ex_y[i] - space[x][i];</span><br><span class="line">            <span class="keyword">if</span> (gap == <span class="number">0</span>)&#123;</span><br><span class="line">                vis_y[i] = <span class="literal">true</span>;</span><br><span class="line">                <span class="keyword">if</span> (match[i] == <span class="number">-1</span> || dfs(match[i]))&#123;</span><br><span class="line">                    match[i] = x;</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                slack[i] = min(slack[i],gap);</span><br><span class="line">                <span class="comment">//由于gap始终和X集合中的x有关，因此slack必定记录了i到已经标记过的X集合中最小差值</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">KM</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(match,<span class="number">-1</span>,<span class="keyword">sizeof</span> match);</span><br><span class="line">    <span class="built_in">memset</span>(ex_y,<span class="number">0</span>,<span class="keyword">sizeof</span> ex_y);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; N; ++i)&#123;</span><br><span class="line">        ex_x[i] = space[i][<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>;j &lt; N; ++j)&#123;</span><br><span class="line">            ex_x[i] = max(ex_x[i],space[i][j]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; N; ++i)&#123;</span><br><span class="line">        <span class="built_in">memset</span>(slack,INF,<span class="keyword">sizeof</span> slack);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (<span class="literal">true</span>)&#123;</span><br><span class="line">            <span class="built_in">memset</span>(vis_x,<span class="literal">false</span>,<span class="keyword">sizeof</span> vis_x);</span><br><span class="line">            <span class="built_in">memset</span>(vis_y,<span class="literal">false</span>,<span class="keyword">sizeof</span> vis_y);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (dfs(i))</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">int</span> d = INF;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; N; ++j)&#123;</span><br><span class="line">                <span class="keyword">if</span> (vis_y[j] == <span class="literal">false</span>)&#123;</span><br><span class="line">                    d = min(slack[j],d);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; N; ++j)&#123;</span><br><span class="line">                <span class="keyword">if</span> (vis_x[j] == <span class="literal">true</span>)&#123;</span><br><span class="line">                    ex_x[j] -= d;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (vis_y[j] == <span class="literal">true</span>)&#123;</span><br><span class="line">                    ex_y[j] += d;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span>&#123;</span><br><span class="line">                    slack[j] -= d;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; N; ++i)&#123;</span><br><span class="line">        ans += space[match[i]][i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (~<span class="built_in">scanf</span> (<span class="string">"%d"</span>,&amp;N))&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; N; ++i)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; N; ++j)</span><br><span class="line">                <span class="built_in">scanf</span> (<span class="string">"%d"</span>,&amp;space[i][j]);</span><br><span class="line">        <span class="built_in">printf</span> (<span class="string">"%d\n"</span>,KM());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;传送门：&lt;a href=&quot;http://acm.hdu.edu.cn/showproblem.php?pid=2255&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;HDU-2255 奔小康赚大钱&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Problem Description&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;note default&quot;&gt;&lt;p&gt;传说在遥远的地方有一个非常富裕的村落,有一天,村长决定进行制度改革：重新分配房子。&lt;br&gt;这可是一件大事,关系到人民的住房问题啊。村里共有n间房间,刚好有n家老百姓,考虑到每家都要有房住（如果有老百姓没房子住的话，容易引起不安定因素），每家必须分配到一间房子且只能得到一间房子。&lt;br&gt;另一方面,村长和另外的村领导希望得到最大的效益,这样村里的机构才会有钱.由于老百姓都比较富裕,他们都能对每一间房子在他们的经济范围内出一定的价格,比如有3间房子,一家老百姓可以对第一间出10万,对第2间出2万,对第3间出20万.(当然是在他们的经济范围内).现在这个问题就是村领导怎样分配房子才能使收入最大.(村民即使有钱购买一间房子但不一定能买到,要看村领导分配的).&lt;/p&gt;&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="ACM题解" scheme="https://amannix.github.io/categories/ACM%E9%A2%98%E8%A7%A3/"/>
+    
+    
+      <category term="图论，二分图" scheme="https://amannix.github.io/tags/%E5%9B%BE%E8%AE%BA%EF%BC%8C%E4%BA%8C%E5%88%86%E5%9B%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>POJ-3041 Asteroids(二分图最小点覆盖)</title>
+    <link href="https://amannix.github.io/2018/09/16/POJ-3041/"/>
+    <id>https://amannix.github.io/2018/09/16/POJ-3041/</id>
+    <published>2018-09-16T10:35:23.000Z</published>
+    <updated>2018-09-16T11:10:16.604Z</updated>
+    
+    <content type="html"><![CDATA[<p>传送门：<a href="http://poj.org/problem?id=3041" target="_blank" rel="noopener">POJ-3041 Asteroids</a></p><p><strong>Description</strong></p><div class="note default"><p>Bessie wants to navigate her spaceship through a dangerous asteroid field in the shape of an N x N grid (1 &lt;= N &lt;= 500). The grid contains K asteroids (1 &lt;= K &lt;= 10,000), which are conveniently located at the lattice points of the grid.</p><p>Fortunately, Bessie has a powerful weapon that can vaporize all the asteroids in any given row or column of the grid with a single shot.This weapon is quite expensive, so she wishes to use it sparingly.Given the location of all the asteroids in the field, find the minimum number of shots Bessie needs to fire to eliminate all of the asteroids.</p></div><a id="more"></a><p><strong>Input</strong></p><div class="note default"><ul><li>Line 1: Two integers N and K, separated by a single space.</li><li>Lines 2..K+1: Each line contains two space-separated integers R and C (1 &lt;= R, C &lt;= N) denoting the row and column coordinates of an asteroid, respectively.</li></ul></div><p><strong>Output</strong></p><div class="note default"><ul><li>Line 1: The integer representing the minimum number of times Bessie must shoot.</li></ul></div><p><strong>Sample Input</strong></p><blockquote><p>3 4<br>1 1<br>1 3<br>2 2<br>3 2</p></blockquote><p><strong>Sample Output</strong></p><blockquote><p>2</p></blockquote><p><strong>Hint</strong></p><div class="note default"><p>INPUT DETAILS:<br>The following diagram represents the data, where “X” is an asteroid and “.” is empty space:<br>X.X<br>.X.<br>.X.</p></div><p><strong>思路</strong></p><p>大致题意是说有一片区域用坐标表示，这个区域上有很多的障碍物，然后飞船可以发射激光消灭每一行或者每一列的所有障碍物，求最小发射次数。可以令坐标x，y分别作为顶点建立二分图模型，每个障碍作为连接顶点的边来看。这样便转化为了求图上最少的顶点数使得所有的边都被关联进去（有点像是最小生成树的概念……），也就是二分图最小点覆盖的问题。根据二分图模型某个定理：最大匹配数=最小点覆盖。于是乎就是非常简单的匈牙利模板。</p><p><strong>Code</strong></p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> Max = <span class="number">505</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> m,n,<span class="built_in">map</span>[Max][Max],match[Max];</span><br><span class="line"><span class="keyword">bool</span> vis[Max];</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> u)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= n; ++i)&#123;</span><br><span class="line">        <span class="keyword">if</span> (vis[i] == <span class="literal">false</span> &amp;&amp; <span class="built_in">map</span>[u][i] == <span class="number">1</span>)&#123;</span><br><span class="line">            vis[i] = <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">if</span> (match[i] == <span class="number">-1</span> || find(match[i]))&#123;</span><br><span class="line">                match[i] = u;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span> (<span class="string">"%d%d"</span>,&amp;n,&amp;m);</span><br><span class="line">    <span class="built_in">memset</span>(match,<span class="number">-1</span>,<span class="keyword">sizeof</span> match);</span><br><span class="line">    <span class="built_in">memset</span>(<span class="built_in">map</span>,<span class="number">0</span>,<span class="keyword">sizeof</span> <span class="built_in">map</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; m; ++i)&#123;</span><br><span class="line">        <span class="keyword">int</span> x,y;</span><br><span class="line">        <span class="built_in">scanf</span> (<span class="string">"%d%d"</span>,&amp;x,&amp;y);</span><br><span class="line">        <span class="built_in">map</span>[x][y] = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= n; ++i)&#123;</span><br><span class="line">        <span class="built_in">memset</span>(vis,<span class="number">0</span>,<span class="keyword">sizeof</span> vis);</span><br><span class="line">        <span class="keyword">if</span> (find(i))</span><br><span class="line">            ++ans;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span> (<span class="string">"%d\n"</span>,ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;传送门：&lt;a href=&quot;http://poj.org/problem?id=3041&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;POJ-3041 Asteroids&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;note default&quot;&gt;&lt;p&gt;Bessie wants to navigate her spaceship through a dangerous asteroid field in the shape of an N x N grid (1 &amp;lt;= N &amp;lt;= 500). The grid contains K asteroids (1 &amp;lt;= K &amp;lt;= 10,000), which are conveniently located at the lattice points of the grid.&lt;/p&gt;
+&lt;p&gt;Fortunately, Bessie has a powerful weapon that can vaporize all the asteroids in any given row or column of the grid with a single shot.This weapon is quite expensive, so she wishes to use it sparingly.Given the location of all the asteroids in the field, find the minimum number of shots Bessie needs to fire to eliminate all of the asteroids.&lt;/p&gt;&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="ACM题解" scheme="https://amannix.github.io/categories/ACM%E9%A2%98%E8%A7%A3/"/>
+    
+    
+      <category term="图论" scheme="https://amannix.github.io/tags/%E5%9B%BE%E8%AE%BA/"/>
+    
+      <category term="二分图" scheme="https://amannix.github.io/tags/%E4%BA%8C%E5%88%86%E5%9B%BE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>POJ-1094 Sorting It All Out(拓扑排序)</title>
-    <link href="http://yoursite.com/2018/09/14/POJ-1094/"/>
-    <id>http://yoursite.com/2018/09/14/POJ-1094/</id>
+    <link href="https://amannix.github.io/2018/09/14/POJ-1094/"/>
+    <id>https://amannix.github.io/2018/09/14/POJ-1094/</id>
     <published>2018-09-14T06:42:07.000Z</published>
     <updated>2018-09-14T07:03:02.669Z</updated>
     
@@ -33,17 +84,17 @@
     
     </summary>
     
-      <category term="ACM题解" scheme="http://yoursite.com/categories/ACM%E9%A2%98%E8%A7%A3/"/>
+      <category term="ACM题解" scheme="https://amannix.github.io/categories/ACM%E9%A2%98%E8%A7%A3/"/>
     
     
-      <category term="图论" scheme="http://yoursite.com/tags/%E5%9B%BE%E8%AE%BA/"/>
+      <category term="图论" scheme="https://amannix.github.io/tags/%E5%9B%BE%E8%AE%BA/"/>
     
   </entry>
   
   <entry>
     <title>POJ-2255 Tree Recovery(二叉树遍历)</title>
-    <link href="http://yoursite.com/2018/09/14/POJ-2255/"/>
-    <id>http://yoursite.com/2018/09/14/POJ-2255/</id>
+    <link href="https://amannix.github.io/2018/09/14/POJ-2255/"/>
+    <id>https://amannix.github.io/2018/09/14/POJ-2255/</id>
     <published>2018-09-14T06:23:33.000Z</published>
     <updated>2018-09-14T06:48:46.929Z</updated>
     
@@ -57,17 +108,17 @@
     
     </summary>
     
-      <category term="ACM题解" scheme="http://yoursite.com/categories/ACM%E9%A2%98%E8%A7%A3/"/>
+      <category term="ACM题解" scheme="https://amannix.github.io/categories/ACM%E9%A2%98%E8%A7%A3/"/>
     
     
-      <category term="图论" scheme="http://yoursite.com/tags/%E5%9B%BE%E8%AE%BA/"/>
+      <category term="图论" scheme="https://amannix.github.io/tags/%E5%9B%BE%E8%AE%BA/"/>
     
   </entry>
   
   <entry>
     <title>POJ-2965 The Pilots Brothers&#39; refrigerator(DFS+状态压缩)</title>
-    <link href="http://yoursite.com/2018/09/06/POJ-2965%20The%20Pilots%20Brothers&#39;%20refrigerator/"/>
-    <id>http://yoursite.com/2018/09/06/POJ-2965 The Pilots Brothers&#39; refrigerator/</id>
+    <link href="https://amannix.github.io/2018/09/06/POJ-2965%20The%20Pilots%20Brothers&#39;%20refrigerator/"/>
+    <id>https://amannix.github.io/2018/09/06/POJ-2965 The Pilots Brothers&#39; refrigerator/</id>
     <published>2018-09-06T14:38:15.000Z</published>
     <updated>2018-09-06T15:25:43.847Z</updated>
     
@@ -83,17 +134,17 @@
     
     </summary>
     
-      <category term="ACM题解" scheme="http://yoursite.com/categories/ACM%E9%A2%98%E8%A7%A3/"/>
+      <category term="ACM题解" scheme="https://amannix.github.io/categories/ACM%E9%A2%98%E8%A7%A3/"/>
     
     
-      <category term="枚举" scheme="http://yoursite.com/tags/%E6%9E%9A%E4%B8%BE/"/>
+      <category term="枚举" scheme="https://amannix.github.io/tags/%E6%9E%9A%E4%B8%BE/"/>
     
   </entry>
   
   <entry>
     <title>POJ-1753 Flip-Game(二进制枚举)</title>
-    <link href="http://yoursite.com/2018/09/06/POJ-1753%20Flip-Game/"/>
-    <id>http://yoursite.com/2018/09/06/POJ-1753 Flip-Game/</id>
+    <link href="https://amannix.github.io/2018/09/06/POJ-1753%20Flip-Game/"/>
+    <id>https://amannix.github.io/2018/09/06/POJ-1753 Flip-Game/</id>
     <published>2018-09-06T09:57:12.000Z</published>
     <updated>2018-09-06T15:27:48.073Z</updated>
     
@@ -110,17 +161,17 @@
     
     </summary>
     
-      <category term="ACM题解" scheme="http://yoursite.com/categories/ACM%E9%A2%98%E8%A7%A3/"/>
+      <category term="ACM题解" scheme="https://amannix.github.io/categories/ACM%E9%A2%98%E8%A7%A3/"/>
     
     
-      <category term="枚举" scheme="http://yoursite.com/tags/%E6%9E%9A%E4%B8%BE/"/>
+      <category term="枚举" scheme="https://amannix.github.io/tags/%E6%9E%9A%E4%B8%BE/"/>
     
   </entry>
   
   <entry>
     <title>CF 505 Plasticine zebra(环状字符串处理)</title>
-    <link href="http://yoursite.com/2018/09/02/Plasticine%20zebra/"/>
-    <id>http://yoursite.com/2018/09/02/Plasticine zebra/</id>
+    <link href="https://amannix.github.io/2018/09/02/Plasticine%20zebra/"/>
+    <id>https://amannix.github.io/2018/09/02/Plasticine zebra/</id>
     <published>2018-09-02T05:40:22.000Z</published>
     <updated>2018-09-06T15:27:15.376Z</updated>
     
@@ -137,17 +188,17 @@
     
     </summary>
     
-      <category term="ACM题解" scheme="http://yoursite.com/categories/ACM%E9%A2%98%E8%A7%A3/"/>
+      <category term="ACM题解" scheme="https://amannix.github.io/categories/ACM%E9%A2%98%E8%A7%A3/"/>
     
     
-      <category term="字符串" scheme="http://yoursite.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+      <category term="字符串" scheme="https://amannix.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
   </entry>
   
   <entry>
     <title>Weakened Common Divisor</title>
-    <link href="http://yoursite.com/2018/09/01/Weakened%20Common%20Divisor/"/>
-    <id>http://yoursite.com/2018/09/01/Weakened Common Divisor/</id>
+    <link href="https://amannix.github.io/2018/09/01/Weakened%20Common%20Divisor/"/>
+    <id>https://amannix.github.io/2018/09/01/Weakened Common Divisor/</id>
     <published>2018-09-01T15:02:35.000Z</published>
     <updated>2018-09-06T15:27:17.098Z</updated>
     
@@ -164,17 +215,17 @@
     
     </summary>
     
-      <category term="ACM题解" scheme="http://yoursite.com/categories/ACM%E9%A2%98%E8%A7%A3/"/>
+      <category term="ACM题解" scheme="https://amannix.github.io/categories/ACM%E9%A2%98%E8%A7%A3/"/>
     
     
-      <category term="基础数学" scheme="http://yoursite.com/tags/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6/"/>
+      <category term="基础数学" scheme="https://amannix.github.io/tags/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
   <entry>
     <title>codeforces Round 49-Minimum Value Rectangle</title>
-    <link href="http://yoursite.com/2018/08/20/Minimum%20Value%20Rectangle/"/>
-    <id>http://yoursite.com/2018/08/20/Minimum Value Rectangle/</id>
+    <link href="https://amannix.github.io/2018/08/20/Minimum%20Value%20Rectangle/"/>
+    <id>https://amannix.github.io/2018/08/20/Minimum Value Rectangle/</id>
     <published>2018-08-20T15:39:06.000Z</published>
     <updated>2018-09-01T15:42:54.252Z</updated>
     
@@ -193,17 +244,17 @@
     
     </summary>
     
-      <category term="ACM题解" scheme="http://yoursite.com/categories/ACM%E9%A2%98%E8%A7%A3/"/>
+      <category term="ACM题解" scheme="https://amannix.github.io/categories/ACM%E9%A2%98%E8%A7%A3/"/>
     
     
-      <category term="基础数学" scheme="http://yoursite.com/tags/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6/"/>
+      <category term="基础数学" scheme="https://amannix.github.io/tags/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
   <entry>
     <title>hdu-4081 Qin Shi Huang&#39;s National Road System(次小生成树)</title>
-    <link href="http://yoursite.com/2018/08/17/hdu-4081/"/>
-    <id>http://yoursite.com/2018/08/17/hdu-4081/</id>
+    <link href="https://amannix.github.io/2018/08/17/hdu-4081/"/>
+    <id>https://amannix.github.io/2018/08/17/hdu-4081/</id>
     <published>2018-08-17T14:25:50.000Z</published>
     <updated>2018-09-06T10:19:26.183Z</updated>
     
@@ -216,19 +267,19 @@
     
     </summary>
     
-      <category term="ACM题解" scheme="http://yoursite.com/categories/ACM%E9%A2%98%E8%A7%A3/"/>
+      <category term="ACM题解" scheme="https://amannix.github.io/categories/ACM%E9%A2%98%E8%A7%A3/"/>
     
     
-      <category term="图论" scheme="http://yoursite.com/tags/%E5%9B%BE%E8%AE%BA/"/>
+      <category term="图论" scheme="https://amannix.github.io/tags/%E5%9B%BE%E8%AE%BA/"/>
     
-      <category term="生成树" scheme="http://yoursite.com/tags/%E7%94%9F%E6%88%90%E6%A0%91/"/>
+      <category term="生成树" scheme="https://amannix.github.io/tags/%E7%94%9F%E6%88%90%E6%A0%91/"/>
     
   </entry>
   
   <entry>
     <title>POJ-1679 Unique MST(判断最小生成树是否唯一)</title>
-    <link href="http://yoursite.com/2018/08/16/POJ-1679%20Unique%20MST/"/>
-    <id>http://yoursite.com/2018/08/16/POJ-1679 Unique MST/</id>
+    <link href="https://amannix.github.io/2018/08/16/POJ-1679%20Unique%20MST/"/>
+    <id>https://amannix.github.io/2018/08/16/POJ-1679 Unique MST/</id>
     <published>2018-08-15T17:28:21.000Z</published>
     <updated>2018-09-06T14:34:07.395Z</updated>
     
@@ -248,19 +299,19 @@
     
     </summary>
     
-      <category term="ACM题解" scheme="http://yoursite.com/categories/ACM%E9%A2%98%E8%A7%A3/"/>
+      <category term="ACM题解" scheme="https://amannix.github.io/categories/ACM%E9%A2%98%E8%A7%A3/"/>
     
     
-      <category term="图论" scheme="http://yoursite.com/tags/%E5%9B%BE%E8%AE%BA/"/>
+      <category term="图论" scheme="https://amannix.github.io/tags/%E5%9B%BE%E8%AE%BA/"/>
     
-      <category term="生成树" scheme="http://yoursite.com/tags/%E7%94%9F%E6%88%90%E6%A0%91/"/>
+      <category term="生成树" scheme="https://amannix.github.io/tags/%E7%94%9F%E6%88%90%E6%A0%91/"/>
     
   </entry>
   
   <entry>
     <title>PID算法小结</title>
-    <link href="http://yoursite.com/2018/08/15/PID%E7%AE%97%E6%B3%95%E5%B0%8F%E7%BB%93/"/>
-    <id>http://yoursite.com/2018/08/15/PID算法小结/</id>
+    <link href="https://amannix.github.io/2018/08/15/PID%E7%AE%97%E6%B3%95%E5%B0%8F%E7%BB%93/"/>
+    <id>https://amannix.github.io/2018/08/15/PID算法小结/</id>
     <published>2018-08-15T08:25:21.000Z</published>
     <updated>2018-08-15T14:02:05.742Z</updated>
     
@@ -272,17 +323,17 @@
     
     </summary>
     
-      <category term="嵌入式算法" scheme="http://yoursite.com/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%AE%97%E6%B3%95/"/>
+      <category term="嵌入式算法" scheme="https://amannix.github.io/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="PID" scheme="http://yoursite.com/tags/PID/"/>
+      <category term="PID" scheme="https://amannix.github.io/tags/PID/"/>
     
   </entry>
   
   <entry>
     <title>牛客网练习赛24-B凤凰</title>
-    <link href="http://yoursite.com/2018/08/12/%E7%BB%83%E4%B9%A0%E8%B5%9B24-B%E5%87%A4%E5%87%B0/"/>
-    <id>http://yoursite.com/2018/08/12/练习赛24-B凤凰/</id>
+    <link href="https://amannix.github.io/2018/08/12/%E7%BB%83%E4%B9%A0%E8%B5%9B24-B%E5%87%A4%E5%87%B0/"/>
+    <id>https://amannix.github.io/2018/08/12/练习赛24-B凤凰/</id>
     <published>2018-08-11T17:28:21.000Z</published>
     <updated>2018-08-15T16:33:02.279Z</updated>
     
@@ -298,10 +349,10 @@
     
     </summary>
     
-      <category term="ACM题解" scheme="http://yoursite.com/categories/ACM%E9%A2%98%E8%A7%A3/"/>
+      <category term="ACM题解" scheme="https://amannix.github.io/categories/ACM%E9%A2%98%E8%A7%A3/"/>
     
     
-      <category term="并查集" scheme="http://yoursite.com/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
+      <category term="并查集" scheme="https://amannix.github.io/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
     
   </entry>
   
